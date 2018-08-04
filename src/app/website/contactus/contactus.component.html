@@ -1,0 +1,201 @@
+<section id="loginform" class="outer-wrapper section-padding">
+
+  <div class="inner-wrapper">
+    <div class="container">
+      <div class="row  text-center">
+        <div class="col-md-12">
+          <h1>Let's Talk</h1>
+          <p>This is the beginning of something great. Talk to us and we'll show you
+            <br>what we’ve done, and what we can do for you.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5 login-form-container col-sm-offset-3">
+          <form class="login-form" novalidate autocomplete="off" [formGroup]="UserDetailsForm">
+            <div class="input-container">
+              <input type="text" class="input" name="name" placeholder="Name" required [(ngModel)]="profile.name" formControlName="name"
+              />
+              <span class="error" *ngIf="UserDetailsForm.get('name').touched && UserDetailsForm.get('name').hasError('required')">
+                Name required
+              </span>
+            </div>
+            <div class="input-container">
+              <input type="email" class="input" name="email" placeholder="Email" required [(ngModel)]="profile.email" formControlName="email"
+              />
+              <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('required')">
+                Email required
+              </span>
+              <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('pattern')">
+                Enter valid Email
+              </span>
+            </div>
+
+            <div class="input-container">
+              <input type="text" class="input" name="mobile" placeholder="Mobile" required [(ngModel)]="profile.mobile" formControlName="mobile"
+              />
+              <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('required')">
+                Mobile required
+              </span>
+              <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('pattern')">
+                Invalid Mobile Number
+              </span>
+            </div>
+            <div class="input-container">
+              <input type="text" class="input" name="message" placeholder="Your Message" [(ngModel)]="profile.message" [ngModelOptions]="{standalone: true}"
+              />
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <button type="submit" class="get-in-touch btn" (click)="getInTouch()" [disabled]="!UserDetailsForm.valid" [ngClass]="{'green-color': UserDetailsForm.valid}">Send</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- <section class="section-padding">
+<div class="container">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.8418653040662!2d78.37274231506612!3d17.41937498805949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9407baba124b%3A0xb46a49085cd79e7b!2sDigital+Lync+Technologies+Pvt.+Ltd.!5e0!3m2!1sen!2sin!4v1521317713932" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+</section> -->
+
+<!-- <section>
+  <div class="panel panel-default">
+    <div class="panel-body" style="padding:0px;">
+    <h3 class="orange text-center margin-bottom-10 margin-top-10">Gachibowli</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15227.367460220603!2d78.374931!3d17.419375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb46a49085cd79e7b!2sDigital+Lync+Technologies+Pvt.+Ltd.!5e0!3m2!1sen!2sin!4v1506461306778" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+    </div>
+  </div>
+</section> -->
+<section>
+  <div class="container">
+    <div class="row" style="padding-bottom:30px">
+      <!-- <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="panel panel-default"> 
+          <div class="panel-body" style="padding:0px">
+    <h3 class="orange text-center margin-bottom-10 margin-top-10">Gachibowli</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15227.367460220603!2d78.374931!3d17.419375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb46a49085cd79e7b!2sDigital+Lync+Technologies+Pvt.+Ltd.!5e0!3m2!1sen!2sin!4v1506461306778" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen=""></iframe>        
+  </div>
+  </div>      
+  </div> -->
+      <!-- <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="panel panel-default"> 
+                <div class="panel-body" style="padding:0px">
+            <h3 class="orange text-center margin-bottom-10 margin-top-10">Kukatpally</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15221.524721180052!2d78.3926815!3d17.4893082!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x53ebc1cd2bf7c2d0!2sDigital+Lync!5e0!3m2!1sen!2sin!4v1506461502985" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen=""></iframe>     
+          </div> 
+          </div>    
+          </div> -->
+      <!-- <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-default"> 
+                        <div class="panel-body" style="padding:0px">
+                    <h3 class="orange text-center margin-bottom-10 margin-top-10">SRNagar</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121803.09372791353!2d78.37842131733653!3d17.443113457419788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90c6cb0cd523%3A0x63395782c5d1053b!2sDigital+Lync+-+Technology+Education+Hub!5e0!3m2!1sen!2sin!4v1516992097101" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                        </div>
+                        </div>      
+                  </div> -->
+      <!-- <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="panel panel-default"> 
+                                <div class="panel-body" style="padding:0px">
+                            <h3 class="orange text-center margin-bottom-10 margin-top-10">Guntur</h3>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15316.663525174235!2d80.4280624!3d16.3144663!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe4ac326036800d33!2sDigital+Lync+Technologies+Private+Limited!5e0!3m2!1sen!2sin!4v1516992048466" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                                </div>
+                            </div>      
+                          </div> -->
+
+      <div class="col-sm-12">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Carousel indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+          </ol>
+          <!-- Wrapper for carousel items -->
+          <div class="carousel-inner">
+            <div class="item carousel-item active">
+              <div class="row">
+                <div class="col-sm-3 ">
+                  <div class="panel panel-default">
+                    <div class="panel-body" style="padding:0px">
+                      <h3 class="orange text-center margin-bottom-10 margin-top-10">Gachibowli</h3>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15227.367460220603!2d78.374931!3d17.419375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb46a49085cd79e7b!2sDigital+Lync+Technologies+Pvt.+Ltd.!5e0!3m2!1sen!2sin!4v1506461306778"
+                        width="100%" height="350" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="panel panel-default">
+                    <div class="panel-body" style="padding:0px">
+                      <h3 class="orange text-center margin-bottom-10 margin-top-10">Kukatpally</h3>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15221.524721180052!2d78.3926815!3d17.4893082!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x53ebc1cd2bf7c2d0!2sDigital+Lync!5e0!3m2!1sen!2sin!4v1506461502985"
+                        width="100%" height="350" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="panel panel-default">
+                    <div class="panel-body" style="padding:0px">
+                      <h3 class="orange text-center margin-bottom-10 margin-top-10">SRNagar</h3>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121803.09372791353!2d78.37842131733653!3d17.443113457419788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90c6cb0cd523%3A0x63395782c5d1053b!2sDigital+Lync+-+Technology+Education+Hub!5e0!3m2!1sen!2sin!4v1516992097101"
+                        width="100%" height="350" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="panel panel-default">
+                    <div class="panel-body" style="padding:0px">
+                      <h3 class="orange text-center margin-bottom-10 margin-top-10">Guntur</h3>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15316.663525174235!2d80.4280624!3d16.3144663!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe4ac326036800d33!2sDigital+Lync+Technologies+Private+Limited!5e0!3m2!1sen!2sin!4v1516992048466"
+                        width="100%" height="350" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item carousel-item">
+              <div class="row">
+
+                <div class="col-sm-3">
+                  <div class="panel panel-default">
+                    <div class="panel-body" style="padding:0px">
+                      <h3 class="orange text-center margin-bottom-10 margin-top-10">Dilsukhnagar</h3>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60226.33330304093!2d78.5165669812609!3d17.369359309577963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb98c1d63acbcf%3A0xf38064fc918d6295!2sDigital+Lync!5e0!3m2!1sen!2sin!4v1524570475329"
+                        width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="panel panel-default">
+                    <div class="panel-body" style="padding:0px">
+                      <h3 class="orange text-center margin-bottom-10 margin-top-10">Malaysia</h3>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.7328025344164!2d101.65462751429968!3d3.164936897695526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc48f6c324d963%3A0xfc10550af59bded2!2sA3%2C+6%2C+Jalan+Sri+Hartamas+17%2C+Taman+Sri+Hartamas%2C+50480+Kuala+Lumpur%2C+Wilayah+Persekutuan+Kuala+Lumpur%2C+Malaysia!5e0!3m2!1sen!2sin!4v1524574894810"
+                        width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="panel panel-default">
+                    <div class="panel-body" style="padding:0px">
+                      <h3 class="orange text-center margin-bottom-10 margin-top-10">Sanfrancisco</h3>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.250254043731!2d-122.41095798504446!3d37.784174579757675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580859235eb99%3A0x27419ca2477c40b6!2sCyber+Lync!5e0!3m2!1sen!2sin!4v1524574772157"
+                        width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="container">
+  <app-carousel-contact></app-carousel-contact>
+</section> -->
+<!-- <section>
+    <router-outlet></router-outlet>
+</section> -->

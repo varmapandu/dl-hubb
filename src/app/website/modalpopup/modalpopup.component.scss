@@ -1,0 +1,43 @@
+#formtosheduledemo input {
+    outline: 0 !important;
+    box-shadow: none;
+}
+
+.modal-body {
+    overflow: hidden;
+}
+
+.modal-body label {
+    color: #57b5ac;
+    font-weight: normal;
+}
+
+.modal-header,
+.modal-footer {
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 1008px;
+        margin: 30px auto;
+    }
+}
+
+.modelform-submit {
+    width: 120px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #57b5ac;
+}
+.download-curriculum{
+    background-color: #57b5ac;
+    width: 290px;
+    height: 40px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  .form-group span{
+      float: left;
+  }

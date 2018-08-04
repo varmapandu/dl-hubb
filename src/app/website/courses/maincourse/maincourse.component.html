@@ -1,0 +1,344 @@
+<section class="course_poster_banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <app-bgvideo [inputData]="bannerImage"></app-bgvideo>
+        </div>
+      </div>
+    </div>
+</section>          
+<section id="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <a routerLink="/">Home </a>
+        <i class="fa fa-angle-right"></i>
+        <a routerLink="/courses">Courses </a>
+        <i class="fa fa-angle-right"></i>
+        <h1 class="font-size-12 slugName" style="display:inline"><a class="captilize-text">{{page.slug}} </a></h1>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-padding">
+  <div class="container">
+    <div class="card">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-6 col-xs-6 col-lg-6">
+              <div class="" style="border-left: 2px solid red;height: 100px;margin:20px 20px 20px 28px;">
+                <div class="card-content" style="height:110px;width:110px; float:left">
+                  <img src="../../../assets/images/clock.png" alt="clock_digitallync" class="img-responsive">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-6 col-lg-6">
+              <div style="padding:20px 0px;">
+                <p class="font-weight-bold">Duration</p>
+                <p>{{courseData.course.duration}}</p>
+                <p>{{courseData.course.hours}} Hours/Week</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-6 col-xs-6 col-lg-6">
+              <div class="" style="border-left: 2px solid  #00ae62;height: 100px;margin:20px 20px 20px 28px;">
+                <div class="card-content" style="height:110px;width:110px; float:left">
+                  <img src="../../../assets/images/pre-requisits.png" alt="clock_digitallync" class="img-responsive">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xs-6 col-lg-6">
+              <div style="padding:20px 0px;">
+                <p class="font-weight-bold">Pre-requisite</p>
+                <p *ngFor="let prerequesties of courseData.course.pre; let i = index;">
+                  <span *ngIf="i<2">{{prerequesties}}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-6 col-xs-6 col-lg-6">
+              <div class="" style="border-left: 2px solid #557dbf;height: 100px;margin:20px 20px 20px 28px;">
+                <div class="card-content" style="height:110px;width:110px; float:left">
+                  <img src="../../../assets/images/projects.png" alt="clock_digitallync" class="img-responsive">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-6 col-lg-6">
+              <div style="padding:30px;">
+                <p class="font-weight-bold">Live Projects</p>
+                <p
+                >2+</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="box-shadow" [class.fixed-header]="isScrolled" style="padding:12px">
+    <div class="container">
+    <nav class="sticky-scroll">
+        <ul class="tabel Aligner">
+          <li *ngFor="let item of menu; let i = index;" SimpleSmoothScroll [scrollTo]="item.id" [duration]="1000"
+            (click)="states.activeItem=item.id">
+            <a class="" href="#{{item.id}}">{{item.name}}</a>
+          </li>
+          <li class="nav-item" style="border-left:none;" *ngIf="enrollBtn">
+            <app-formmodal [page]="page" [buttonText]="buttonText"></app-formmodal>
+          </li>
+        </ul>
+    </nav>
+  </div>
+  </div>
+</section>
+<section class="padding-top60 container" id="1">
+  <div class="row">
+    <div class="col-md-9">
+      <app-batches [inputData]="courseName" [page]="page"></app-batches>
+    </div>
+  </div>
+</section>
+<section id="2" class="padding-top60">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 text-center project-heading padding10" style="background-color:#f5a623">
+        <h2>Course Curriculum</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row why-learn-course">
+        <div class="col-md-12 section-padding" style="padding-bottom: 0px;">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h3>Why Learn {{courseName}}</h3>
+              <p>{{courseData.course.why}}</p>
+            </div>
+            <!-- <div class="col-md-4">
+              <img [src]="imageHost+courseData.course.whyImage" class="img-responsive" [alt]="courseData.course.whyImageAlt">
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="row tools-covered" *ngIf="courseData.subCourse.length>0">
+        <div class=" col-md-12 section-padding" style="padding-top: 0px;">
+          <div class="row padding10">
+            <h3 class="row padding10 text-center">Topics Covered</h3>
+            <card-a [inputData]="courseData.subCourse"></card-a>
+            <div class="col-md-12 text-center padding15">
+              <app-modalpopup [page]="page"></app-modalpopup>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row tools-covered" *ngIf="courseData.subModules.length>0">
+        <div class="col-md-12 section-padding" style="padding-top: 0px;">
+          <div class="row padding10 text-center">
+            <h3>Topics Covered</h3> 
+            <card-a [inputData]="courseData.subModules"></card-a>
+          </div>
+          <div class="col-md-12 text-center padding15">
+            <app-modalpopup [page]="page"></app-modalpopup>       
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="projects padding-top60" id="3" *ngIf="courseData.projects.length>0">
+  <div class="container-fluid" id="project">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 text-center project-heading padding10" style="background-color:#4a90e2">
+        <h2>Projects</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container section-padding">
+    <div class="row padding10" *ngFor="let project of courseData.projects; let i = index;">
+      <div class="col-md-12 col-xs-12 block" *ngIf="i%2 == 0">
+        <div class="row Aligner">
+          <div class="col-md-6 col-xs-12 Aligner-item">
+            <div class="padding10">
+              <h3>{{project.name}}</h3>
+              <p>{{project.description}}</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12 hidden-xs">
+            <div class="padding10">
+              <img [src]="imageHost+project.image" [alt]="project.imageAlt" class="img-responsive">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12  col-xs-12 block" *ngIf="i%2 !== 0">
+        <div class="row Aligner">
+          <div class="col-md-6 col-xs-12 hidden-xs">
+            <div class="padding10">
+              <img [src]="imageHost+project.image" [alt]="project.imageAlt" class="img-responsive">
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12 Aligner-item">
+            <div class="padding10">
+              <h3>{{project.name}}</h3>
+              <p>{{project.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="padding-top60" id="4">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 text-center project-heading padding10" style="background-color:#dd4144">
+        <h2>Career with {{courseName}}</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row section-padding">
+      <div class="col-md-12  block">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 text-center career-heading padding10">
+            <h3>Career Prospects</h3>
+          </div>
+        </div>
+        <div class="row Aligner" style="padding: 30px">
+          <div class="col-md-6 hidden-sm hidden-xs">
+            <img src="../../../assets/images/career.svg" style="width: 100%" class="img-responsive wow slideInLeft">
+          </div>
+          <div class="col-md-6 Aligner-item">
+            <p style="font-weight:600">{{courseData.course.careerHead}}</p>
+            <p style="font-weight:600">Upon successful completion of the course, candidates can choose their career as:</p>
+            <ul class="career-prospects" style="list-style: disc outside none;margin-left: 20px">
+              <li *ngFor="let item of courseData.course.careers">{{item}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- why digitall lync -->
+    <div class="row section-padding padding-top60" id="5">
+      <div class="col-md-12 block section-padding">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 text-center whydl-heading">
+            <h3>Why Digital Lync</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 section-padding text-center">
+            <p class="font-size-16">To empower technology seekers by providing world class infrastructure, best quality of technology education, invent
+              great products and support enthusiastic new entrepreneurs.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 text-center success-heading">
+            <h3>Our Success</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12 text-center sec-pad10">
+                <p class="font-size-16">We Understand & We Guide</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center sec-pad10">
+                <img src="../../../assets/images/career-guidance.svg">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center sec-pad10">
+                <p class="font-size-16">Career Guidance</p>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12 text-center sec-pad10">
+                <p class="font-size-16">You Choose & You Excel</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center sec-pad10">
+                <img src="../../../assets/images/course-choice.svg">
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center sec-pad10">
+                <p class="font-size-16">Course Choice</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12 text-center sec-pad10">
+                <p class="font-size-16">We Assist & You Succeed</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center sec-pad10">
+                <img src="../../../assets/images/placement-assistance.png">
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center sec-pad10">
+                <p class="font-size-16">Placement Assistance</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="6" class="padding-top60">
+  <div class="container-fluid"  style="background-color: #0ecbb5;">
+      <div class="row">
+          <div class="col-md-12 text-center reviews-heading padding15">
+            <h2>Our Reviews</h2>
+          </div>
+        </div>
+  </div>
+  <app-reviews></app-reviews>
+</section>
+
+<!-- <div [class.fixed-footer]="stickyFooter" class="sticky-footer animated fadeInRight">
+  <div class="container-fluid clearfix" style="background-color: #1b80c3;">
+    <div class="row">
+      <div class="col-md-4 col-xs-6  col-sm-4 text-center padding10">
+        <p class="white">
+          <a href="mailto:hr@digitallynctech.com?Subject=Hello%20again">Mail: support@digitallync.com </a>
+        </p>
+      </div>
+      <div class="col-md-4 col-xs-6 col-sm-4 text-center padding10">
+        <p class="white">
+          <a href="tel:+91 70938 61616">Instant call @ +91 70938 61616</a>
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-4 text-center padding10 hidden-xs">
+        <p class="white">
+          <a href="tel:+91 70938 61616">Call Request</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div> -->

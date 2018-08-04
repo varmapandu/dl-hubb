@@ -1,0 +1,187 @@
+// list animation
+$total-items: 6;
+
+
+// .uniquefeatures {
+//   // position: absolute;
+// }
+
+.uniquefeatures{
+  padding-top: 15px;
+}
+
+.uniquefeatures li {
+  position: relative;
+  // display: block;
+  // animation: fadeIn 0.5s linear;
+  // animation-fill-mode: both;
+  list-style: none;
+
+  
+}
+
+// Set delay per List Item
+@for $i from 1 through $total-items {
+  li:nth-child(#{$i}) {
+    animation-delay: .25s * $i;
+  }
+}
+
+// Keyframe animation
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  75% {
+    opacity: 0.5;
+    top: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+//we train with difference
+#wetrainsection {
+    background-image: linear-gradient(117deg, #3dbdb6, #0089ce);
+    color: white;
+    padding-bottom: 50px;
+  }
+  
+  .uniquefeatures li span {
+    float: right;
+   
+  }
+  
+  .uniquefeatures li {
+    //margin-top: 8px;
+    list-style-type: none;
+    // margin-right: 19px;
+  }
+  // .uniquefeatures span i {
+  // color: #20bbef;
+  // }
+  
+  .uniquefeatures li span .fa-check:before {
+    content: "\f00c";
+    background: transparent;
+    border: solid 2px #67cff3;
+    border-radius: 50%;
+    color: #67cff3;
+    font-size: 13px;
+    
+  }
+  
+  .wetrain h2 {
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  
+  .support {
+    width: 87%;
+    height: 200px;
+    // margin-top: 40px;
+    border-radius: 3px;
+    background-color: rgba(24, 144, 164, 0.5);
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    // overflow: scroll;
+    margin: auto;
+  }
+  
+  .ourunique {
+    //width: 100%;
+    color: #738195;
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+  
+  .signup {
+    padding: 10px;
+    background-color: #f5f9fc
+  }
+  
+  .signup p {
+    margin-top: 10px;
+    color: #20bbef;
+  }
+  .signUpBtn{
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #20bbef;
+    padding: 8px 20px;
+    color: white;
+    border-radius: 7px;
+  }
+  
+  .jobassurance ul li {
+    margin-top: 30px;
+    list-style-type: none;
+  }
+  
+  .uniquefeatures {
+    list-style: none;
+  }
+  
+  .uniquefeatures>li {
+    position: relative;
+    padding: 20px;
+    font-size: 11px;
+    border-left: 1px solid #dbe2e8;
+    padding-bottom: 3rem;
+    padding-top: 0px;
+    line-height:10px;
+  }
+  
+  @media only screen and (min-width:320px) and (max-width:500px){
+    .uniquefeatures>li {
+      border-left: none;
+    }
+  }
+
+  // .uniquefeatures>li:before {
+  //   content: '\25CF';
+  //   margin-right: 13px;
+  //   font-size: 11px;
+  //   margin-top: 35px;
+  //   position: relative;
+  // }
+  
+  // .uniquefeatures>li:after {
+  //   position: absolute;
+  //   left: 0;
+  //   top: 46px;
+  //   content: '';
+  //   margin-left: 11px;
+  //   height: 100%;
+  // }
+
+  .uniquefeatures>li>:after {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    content: "";
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    background-color: #02b3e4;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+  }
+
+  
+  
+  .uniquefeatures>li:first-of-type:after {
+    top: 77%;
+  }
+  
+  .uniquefeatures>li:last-of-type:after {
+    top: -39%;
+  }
+
+  ul li:last-child{
+    border:none;
+  }

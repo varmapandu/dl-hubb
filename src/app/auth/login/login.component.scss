@@ -1,0 +1,34 @@
+.proceed-btn{
+  height: 50px;
+  border-radius: 2px;
+  background-color: #1b80c3;
+  font-size: 18px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.24), 0 0 8px 0 rgba(0, 0, 0, 0.12);
+//   border-style: solid;
+  color: white;
+  position: relative;
+  // top:96px;
+  width: 250px;
+  margin-top:30px;
+}
+.status {
+  color: red;
+  font-style: bold;
+}
+aside {
+  width: 100%;
+  height: calc(100vh - 0px);
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  overflow: hidden !important;
+}
+main{
+  overflow: hidden !important;
+}
+.error{
+  color: red;
+}

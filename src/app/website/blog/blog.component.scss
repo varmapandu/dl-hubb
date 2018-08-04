@@ -1,0 +1,206 @@
+
+.page-blog-list {
+    padding-bottom: 75px;
+}
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.page-blog-list .list {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.page-blog-list .list+.loading {
+    margin-top: 25px;
+}
+
+@media (min-width: 768px){
+	.page-blog-list .hentry:nth-child(odd) {
+    margin-right: 61.01695% !important;
+}
+
+}
+
+@media (min-width: 768px){
+	.page-blog-list .hentry {
+    margin-bottom: 0;
+    width: 38.98305% !important;
+}
+}
+
+.page-blog-list .hentry {
+    padding: 0 0 5px 0;
+    // -webkit-box-shadow: 0 3px 8px 0 rgba(54,57,73,.05);
+    // box-shadow: 0 3px 8px 0 rgba(54,57,73,.05);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 50px;
+    max-width: 460px;
+    transition: 0.5s;
+}
+@media (min-width: 768px){
+	.page-blog-list .hentry:nth-child(even) {
+    margin-left: 61.01695% !important;
+    margin-top: -230px;
+}
+
+}
+.page-blog-list .hentry:hover {
+    -webkit-box-shadow: 0 29px 60px 0 rgba(54,57,73,.09);
+    box-shadow: 0 29px 60px 0 rgba(54,57,73,.09);
+}
+
+@media (min-width: 768px){
+	.page-blog-list .hentry {
+    margin-bottom: 0;
+    width: 38.98305%;
+}
+
+}
+
+.page-blog-list .custom-pagination {
+    position: absolute;
+    visibility: hidden;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.page-blog-list .list {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+@media (min-width: 768px){
+	*, :after, :before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+}
+ol, ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #f16334;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+@media (min-width: 768px){
+	.page-blog-list .list:after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: #e4e8ed;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: inherit;
+    margin-left: -.5px;
+}
+*, :after, :before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+}
+.page-blog-list .loading {
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+.page-blog-list .np_podcast .img-p:before, .page-blog-list .np_video .img-p:before {
+    background: rgba(38,40,45,.3);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.page-blog-list .hentry a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.page-blog-list .np_podcast .img-p:after, .page-blog-list .np_podcast .img-p:before, .page-blog-list .np_video .img-p:after, .page-blog-list .np_video .img-p:before {
+    content: '';
+    display: block;
+    position: absolute;
+}
+.page-blog-list .audio {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: .9;
+}
+.page-blog-list .title {
+    font-weight: 600;
+    padding: 15px 10px;
+}
+
+.size-24 {
+    font-size: 18px;
+    line-height: 1.66667;
+}
+.page-blog-list .np_podcast .img-p, .page-blog-list .np_video .img-p {
+    position: relative;
+}
+
+.coursebanner .heading {
+    font-size: 43px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 2px;
+    text-align: center;
+    color: white;
+    //margin-top: 150px;
+    
+  }
+  .coursebanner {
+    margin-top: 0px;
+    display: flex;
+    height: 61vh;
+    //background-image: url('../images/home-banner.jpg');
+    background-size: cover;
+    width: 100%
+  }
+  

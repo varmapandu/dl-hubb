@@ -1,0 +1,519 @@
+// bread crumb
+h2{
+  color: white;
+}
+#breadcrumb{
+  padding-top: 30px;
+  //padding-bottom: 30px;
+}
+.padding-top60{
+  padding-top: 55px;
+}
+
+#breadcrumb a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  box-shadow: 0 2px 4px 0 rgba(191, 191, 191, 0.5);
+  padding: 6px 16px !important;
+  border-radius: 4px;
+  margin: 10px;
+}
+#breadcrumb span{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #f64a35;
+  padding: 0px 16px
+}
+#breadcrumb a:nth-child(1){
+  color: #d0021b;
+  font-weight: bold;
+}
+#breadcrumb a:nth-child(3){
+  color: #2183c5;
+  font-weight: bold;
+}
+#breadcrumb a:nth-child(5){
+  color: #00ae62;
+  font-weight: bold;
+}
+
+
+.list-group{
+  margin-bottom:0px !important;
+  padding: 16px 0px;
+}
+.list-group li{
+  list-style-type: none;
+  border-left: 1px solid;
+  display: inline-block;
+  padding: 0px 0px !important;
+  font-size: 0px;
+}
+.list-group li a{
+  text-decoration: none;
+    font-size: 14px;
+    padding: 0px 35px;
+    font-weight: bold;
+}
+
+
+ul li.active a{
+  color:red;
+}
+.box-shadow{
+  box-shadow: 0 2px 4px 0 rgba(160, 160, 160, 0.5);
+}
+
+.project-heading h3{
+	color:white;
+}
+.section-padding{
+	padding: 40px;
+}
+.sec-pad10{
+	padding: 10px;
+}
+.card--image-wrapper{
+    padding: 0;
+    border-bottom-left-radius: .375rem;
+    border-top-left-radius: .375rem;
+    float: left;
+    display: block;
+    margin-right: 1.69491525%;
+    width: 40.6779661%;
+    height: 100%;
+    overflow: hidden;
+    margin-right: 0;
+}
+
+
+
+
+/*Career prospects css*/
+
+.career-heading h3{
+	color:#39b54a;
+}
+.block {
+
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+
+}
+
+.career-prospects{
+	list-style-type: none;
+	text-decoration: none;
+	text-align: left;
+}
+
+/*why digital lync*/
+.whydl-heading h3{
+	color:#dd4144;
+}
+.success-heading h4{
+color:#06b066;
+}
+.fixed-header {
+  position: fixed;
+  top:0; left:0;
+  width: 100%; 
+  z-index: 99;
+  display: block;
+  background-color:#fff;
+}
+.fixed-footer {
+  position: fixed;
+  bottom:0; left:0;
+  width: 100%; 
+  z-index: 9999;
+  transition: all 1s ease;
+  display: block;
+  width: 100%;
+}
+.sticky-footer{
+  p{
+    margin: 0px;
+    font-size: 14px;
+    a{
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+
+.course-rating{
+  width: 30px;
+}
+
+.coursebanner {
+  margin-top: 0px;
+  display: flex;
+  height: 61vh;
+  //background-image: url('../images/home-banner.jpg');
+  background-size: cover;
+  width: 100%
+}
+
+.coursebanner .heading {
+  font-size: 43px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 2px;
+  text-align: center;
+  color: white;
+  //margin-top: 150px;
+  
+}
+.course_poster_banner{
+  background-image: linear-gradient(116deg, #6db7c1, #07cab2);
+  padding:52px;
+}
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+  .course_poster_banner{
+    
+    padding:20px;
+  }
+  .slugName{
+    display: block !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .sticky-scroll>ul>li>a{
+    font-size: 9px !important;
+  }
+}
+
+.coursebanner .caption {
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: left;
+  color: #939393;
+  margin-left: 60px;
+  margin-bottom: 80px;
+}
+
+
+#my-row {
+  display: table;
+}
+
+#my-row .panel {
+  float: none;
+  display: table-cell;
+  vertical-align: top;
+}
+.sticky-container  .scroll-content {
+  border: 1px solid #333;
+  //background-image: linear-gradient(rgba(255, 255, 255, 1) 50%, transparent 50%, transparent);
+  background-size: 50px 50px;
+  height: 100vh !important;
+}
+.sticky-float-right {
+  background-color: rgba(0,255,0, .2);
+}
+
+div[ngui-sticky] {
+  // min-width: 400px;
+  text-align: center;
+  // background: #333;
+  color: #fff;
+  // border: 1px solid #333;
+  padding: 10px;
+}
+
+
+// .affix-top {
+//   position: absolute;
+//   //top: -111px
+// }
+
+// .affix {
+//   top: 0px;
+// }
+
+// .affix, 
+// .affix-bottom {
+//     width: 215px;
+// }
+
+// .affix-bottom {
+//   position: absolute;
+// }
+
+.enroll-now-form{
+  //margin-top: 10px;
+  h3{
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    text-align: center;
+    color: #57b5ac;
+  }
+  button{
+    width: 120px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #57b5ac;
+    color: white;
+  }
+}
+
+.card-content{
+  img{
+    margin: auto;
+  }
+  color: white;
+  margin: auto;
+}
+.form-group{
+  height: 80px;
+}
+.form-group span{
+  color:red !important;
+  font-size: 12px;
+  padding-left: 3px;
+}
+.form-group span:after{
+  color:red !important;
+  font-size: 12px;
+  content:'*';
+  display: inline;
+}
+.why-learn-course{
+  h3{
+    color: #f5a623;
+    font-weight: bold;
+  }
+  p{
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.1px;
+    color: #0071bc;
+  
+  }
+  img{
+    width: 200px;
+    height:200px;
+    margin:auto   
+     //margin-top: -10px;
+  }
+}
+.tools-covered{
+  h3{
+    color: #f5a623;
+    font-weight: bold;
+  }
+}
+.download-curriculum{
+  background-color: #57b5ac;
+  width: 290px;
+  height: 40px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 16px;
+}
+.projects{
+  img{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+  }
+  p{
+    color: #78808a;
+    font-size: 14px;
+  }
+}
+.showForm{
+  display:none;
+}
+.showHide{
+  display: none !important;
+}
+
+// flip cards css
+.flip-container,.flip-container1 {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+
+}
+
+	.flip-container:hover .flipper,  
+  .flip-container.hover .flipper,.flip-container1:hover .flipper,  
+  .flip-container1.hover .flipper  {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .course-front, .course-back {
+width: 286px;
+height: 275px;
+border:0px solid #f8f8f8;
+}
+
+.flip-container1,.module-front{
+  width: 373px !important;
+  height: 150px;
+  border:0px solid #f8f8f8;
+  margin-bottom: 20px;
+}
+.module-back{
+  width: 350px;
+  height: 150px;
+  border-radius: 8px;
+}
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+  
+  -o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
+
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.course-front, .course-back,.module-front,.module-back{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.course-front,.module-front {
+
+	z-index: 2;
+}
+
+.course-back,.module-back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+
+	background: #f8f8f8;
+}
+
+.course-back p {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	// padding: 0 20px;
+  font-family: arial;
+  line-height: 2em;
+}
+.module-back p{
+  position: absolute;
+	bottom: 5px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	// padding: 0 20px;
+  font-family: arial;
+  line-height: 2em;
+}
+nav {
+  border-right: none;
+  width: 100%;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+ 
+}
+
+nav ul li {
+	list-style: none;
+  text-align: center;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #ccc;
+  padding:0px 30px 0px 30px;
+}
+
+nav ul li:first-child {
+	border-left: none;
+}
+
+nav ul li a {
+	display: block;
+  text-decoration: none;
+  color: #616161;
+  padding: 10px 0;
+}
+
+.table {
+  display: table;
+  table-layout: fixed;
+  display: block;
+  
+}
+
+.table ul {
+  display: table-row;
+}
+
+.table ul li {
+  display: table-cell;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  .box-shadow{
+    display: none;
+  }
+
+}
+@media only screen and (max-width: 414px) {
+  .box-shadow {
+    display: none;
+  }
+
+}
+.tabel li:last-child{
+  border-right: none;
+}
+@media only screen and (max-width: 768px) {
+  .box-shadow{
+    display: none;
+  }
+}
+
+
+
+

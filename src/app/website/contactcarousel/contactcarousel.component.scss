@@ -1,0 +1,51 @@
+h4{
+    text-align: center;
+    line-height: 302px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .leftRs {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      width: 50px;
+      height: 50px;
+      box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
+      border-radius: 999px;
+      left: -71px;
+      font-size: 22px;
+    font-weight: bold;
+  }
+
+  .rightRs {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      width: 50px;
+      height: 50px;
+      box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
+      border-radius: 999px;
+      right: -71px;
+      font-size: 22px;
+    font-weight: bold;
+
+  }
+  ngx-tile{
+    div{
+        width: 204px;
+        height: 302px;
+        cursor: pointer;
+    }
+  
+}
+@media only screen and (max-width: 1024px) {
+    .leftRs {
+        left: 0px;
+    }
+    .rightRs{
+        right: 0px;
+    }
+}

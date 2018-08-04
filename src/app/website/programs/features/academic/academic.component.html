@@ -1,0 +1,132 @@
+<section class="coursebanner" style="  background-image: url('../../assets/images/academic-programs-banner.png');">
+  <div class="container Aligner">
+      <div class="row Aligner-item">
+          <div class="col-md-12">
+              <h3 class="heading text-center">Now, We are Offering
+                  <br> Programs Too,
+                  <br> So, Step into a Bright Career!</h3>
+          </div>
+          <div class="col-md-5"></div>
+      </div>
+  </div>
+</section> 
+
+<section id="breadcrumb" class="section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <a routerLink="/">Home </a>
+              <i class="fa fa-angle-right"></i>
+              <a>Academic Programs</a>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="container section-padding">
+  <div class="row">
+      <div class="sticky-container">
+          <div class="col-md-12">
+              <div class="col-md-9 col-sm-9">
+
+                  <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let program of programData" (click)="pageNavigate(program.slug)">
+                      <a [routerLink]="['/program/'+program.slug]">
+                          <div class="card hover-trans wow slideInUp">
+                              <div class="card-image"> 
+                                  <img class="img-responsive img-full" [src]="imageHost+program.coverImage" [alt]="program.coverImageAlt">
+                              </div>
+                              <div class="card-body">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <h4 class="card-title" style="font-size: 14px">{{program.name}}</h4>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-6 col-sm-6 col-xs-6">
+                                          <p>
+                                              <i class="fa fa-eye" style="padding:4px"></i>{{program.views}}
+                                          </p>
+                                      </div>
+                                      <div class="col-md-6 col-sm-6 col-xs-6">
+                                          <p class="pull-right">
+                                              <i class="fa fa-share-alt" style="padding:4px"></i>{{program.share}}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <!-- <div fxLayout="row grow">
+                          <ng-template ngFor let-item [ngForOf]="programData">
+                            <img-card 
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtFCu8Sb4tN1vqnabRKdHJJadD_smwjNbKPmHPkAj6LFMddojZCw" 
+                          >
+                          </img-card>
+                            </ng-template>
+                    </div> -->
+              </div>
+              <div class="col-md-3 col-sm-3 scrollspy" id="scrollelements" style="position:absolute;right:0">
+                  <div id="nav" #nav class="nav course-page-enroll-form hidden-xs hidden-sm" data-spy="affix">
+                      <form class="form panel-body" role="form" class="enroll-now-form" novalidate autocomplete="off" [formGroup]="UserDetailsForm">
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <h3>Enroll Now</h3>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="control-label" for="name">Name</label>
+                              <input class="form-control" name="name" required autofocus placeholder="Name" type="text" required [(ngModel)]="profile.name"
+                                  formControlName="name" />
+                              <span class="error" *ngIf="UserDetailsForm.get('name').touched && UserDetailsForm.get('name').hasError('required')">
+                                  Name required
+                              </span>
+                              <span class="error" *ngIf="UserDetailsForm.get('name').touched && UserDetailsForm.get('name').hasError('pattern')">
+                                      Invalid Name
+                                     </span>
+                          </div>
+                          <div class="form-group">
+                              <label class="control-label" for="email">Email</label>
+                              <input class="form-control" name="email" required autofocus placeholder="Your e-mail" type="email" [(ngModel)]="profile.email"
+                                  formControlName="email" />
+                              <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('required')">
+                                  Email required
+                              </span>
+                              <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('pattern')">
+                                  Enter valid Email
+                              </span>
+                          </div>
+                          <div class="form-group">
+                              <label class="control-label" for="mobile">Mobile</label>
+                              <input class="form-control" name="mobile" required autofocus placeholder="Mobile" type="text" [(ngModel)]="profile.mobile"
+                                  formControlName="mobile" />
+                              <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('required')">
+                                  Mobile required
+                              </span>
+                              <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('pattern')">
+                                  Invalid Mobile Number
+                              </span>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-12 text-center">
+                                  <button class="btn" type="submit" (click)="onsubmit()" [disabled]="!UserDetailsForm.valid" [ngClass]="{'btnEnable': UserDetailsForm.valid}">Send</button>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section>
+  <div class="container-fluid" style="background-color: #0ecbb5;">
+      <div class="row">
+          <div class="col-md-12 text-center padding15">
+              <h2 class="white">Reviews</h2>
+          </div>
+      </div>
+  </div>
+  <app-reviews></app-reviews>
+</section>

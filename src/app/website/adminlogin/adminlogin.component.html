@@ -1,0 +1,56 @@
+<section id="loginform" class="outer-wrapper section-padding">
+
+    <div class="inner-wrapper">
+      <div class="container">
+        <div class="row  text-center">
+          <div class="col-md-12">
+            <h1>Admin Login</h1>
+            <!-- <p>This is the beginning of something great. Talk to us and we'll show you
+              <br>what we’ve done, and what we can do for you.</p> -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5 login-form-container col-sm-offset-3">
+            <form class="login-form" novalidate autocomplete="off" [formGroup]="UserDetailsForm">
+              <div class="input-container">
+                <input type="text" class="input" name="userName" placeholder="Username" required [(ngModel)]="profile.userName" formControlName="name"
+                />
+                <span class="error" *ngIf="UserDetailsForm.get('name').touched && UserDetailsForm.get('name').hasError('required')">
+                  Name required
+                </span>
+              </div>
+              <div class="input-container">
+                <input type="password" class="input" name="password" placeholder="Password" required [(ngModel)]="profile.password" formControlName="password"
+                />
+                <span class="error" *ngIf="UserDetailsForm.get('password').touched && UserDetailsForm.get('password').hasError('required')">
+                    Password required
+                </span>
+             
+              </div>
+  
+              <!-- <div class="input-container">
+                <input type="text" class="input" name="mobile" placeholder="Mobile" required [(ngModel)]="profile.mobile" formControlName="mobile"
+                />
+                <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('required')">
+                  Mobile required
+                </span>
+                <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('pattern')">
+                  Invalid Mobile Number
+                </span>
+              </div>
+              <div class="input-container">
+                <input type="text" class="input" name="message" placeholder="Your Message" [(ngModel)]="profile.message" [ngModelOptions]="{standalone: true}"
+                />
+              </div> -->
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <button type="submit" class="get-in-touch btn" (click)="Login()" [disabled]="!UserDetailsForm.valid" [ngClass]="{'green-color': UserDetailsForm.valid}">Login</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 

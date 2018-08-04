@@ -1,0 +1,212 @@
+<!-- Google Code for Lead Form Conversion Page -->
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 860776361;
+    var google_conversion_label = "YUIbCPyPr34Qqc-5mgM";
+    var google_remarketing_only = false;
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+    <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/860776361/?label=YUIbCPyPr34Qqc-5mgM&amp;guid=ON&amp;script=0"/>
+    </div>
+    </noscript>
+    
+<section style="background-image: linear-gradient(113deg, #7fdeea, #07cab2);">
+	<div class="container-fluid thankyou">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-md-6 hidden-xs hidden-sm thankyou-content text-center">
+					<div class="row" style="padding: 30px;">
+					<h1>THANK YOU!</h1>
+				</div>
+				<div class="row">
+					<h2>We are glad to hear from you. We shall contact you shortly.</h2>
+				</div>
+			</div>
+				<div class="col-md-4 col-md-offset-1 col-sm-12 col-xs-12 connect-card">
+					<div class="row text-center connect-heading">
+						<h3>CONNECT INSTANTLY</h3>
+					</div>
+					<div class="row text-center call-padding20">
+						<img src="../../../assets/images/calllogo.svg">
+					</div>
+					<div class="row text-center callnow call-padding20" style="color:black">
+						<h3>+91 7093861616</h3>
+						<button class="btn btn-primary"><a href="tel:+91 70938 61616" style="text-decoration:none;color:#fff">Call Now</a></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="breadcrumb">
+  <div class="container">
+      <div class="row">
+            <div class="col-md-12">
+                    <a routerLink="/">Home </a>
+                    <i class="fa fa-angle-right"></i>
+                    <a routerLink="/courses">Courses </a>
+                    <!-- <i class="fa fa-angle-right"></i>
+                    <a>{{courseName}} </a> -->
+                  </div>
+      </div>
+  </div>
+</section>
+<section class="container section-padding">
+  <div class="row">
+      <div class="sticky-container">
+          <div class="col-md-12">
+              <div class="col-md-9 col-sm-9">
+                  <div class="row">
+                      <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let course of courseData">
+                          <a [routerLink] = "['/course/'+course.slug]">
+                          <div class="card hover-trans">
+                              <div class="card-image">
+                                  <img class="img-responsive img-full" [src]="imageHost+course.courseImage" [alt]="course.courseImageAlt">
+                              </div>
+                              <div class="card-body">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <h4 class="card-title">{{course.name}}</h4>
+                                      </div>
+                                  </div>
+                                  <!-- <div class="row">
+                                      <div class="col-md-12">
+                                          <ul>
+                                              <li class="list-item pull-left">
+                                                  <img class="img-responsive course-rating" src="../../assets/images/courserating.png" alt="course rating">
+                                              </li>
+                                              <li class="list-item pull-left">
+                                                  <img class="img-responsive course-rating" src="../../assets/images/courserating.png" alt="course rating">
+                                              </li>
+                                              <li class="list-item pull-left">
+                                                  <img class="img-responsive course-rating" src="../../assets/images/courserating.png" alt="course rating">
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </div> -->
+                                  <div class="row">
+                                      <div class="col-md-6 col-sm-6 col-xs-6">
+                                          <p>
+                                              <i class="fa fa-eye"></i>{{course.views}}</p>
+                                      </div>
+                                      <div class="col-md-6 col-sm-6 col-xs-6">
+                                          <!-- <button class="btn-default">Know More <span class="glyphicon glyphicon-arrow-right"></span></button> -->
+                                          <p class="pull-right">
+                                              <i class="fa fa-share-alt"></i>{{course.share}}</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-3 scrollspy" id="scrollelements" style="position:absolute;right:0">
+                  <div id="nav" #nav class="nav course-page-enroll-form hidden-xs hidden-sm" data-spy="affix">
+                      <form  class="form panel-body" role="form" class="enroll-now-form" novalidate autocomplete="off" [formGroup]="UserDetailsForm">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <h3>Enroll Now</h3>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label" for="name">Name</label>
+                            <input class="form-control" name="name" required autofocus placeholder="Name" type="text" required [(ngModel)]="profile.name"  formControlName="name"/>
+                            <span class="error" *ngIf="UserDetailsForm.get('name').touched && UserDetailsForm.get('name').hasError('required')">
+                              Name required
+                            </span>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label" for="email">Email</label>
+                            <input class="form-control" name="email" required autofocus placeholder="Your e-mail" type="email" [(ngModel)]="profile.email"  formControlName="email"/>
+                            <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('required')">
+                              Email required
+                            </span>
+                            <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('pattern')">
+                              Enter valid Email
+                            </span>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label" for="mobile">Mobile</label>
+                            <input class="form-control" name="mobile" required autofocus placeholder="Mobile" type="text" [(ngModel)]="profile.mobile"  formControlName="mobile"/>
+                            <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('required')">
+                              Mobile required
+                            </span>
+                            <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('pattern')">
+                             Invalid Mobile Number
+                            </span>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12 text-center">
+                              <button class="btn" type="submit" (click)="enroll()" [disabled]="!UserDetailsForm.valid">Send</button>
+                            </div>
+                          </div>
+                        </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- <section style="
+background-color: #0ecbb5;
+">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12 text-center padding15">
+              <h2 class="white">Reviews</h2>
+          </div>
+      </div>
+  </div>
+</section>
+<app-carousel></app-carousel> -->
+<section>
+    <div class="container-fluid" style="background-color: #0ecbb5;">
+        <div class="row">
+            <div class="col-md-12 text-center padding15">
+                <h2 class="white">Reviews</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 reviews padding20">
+                <div class="col-md-2 col-sm-4 col-xs-6 text-center">
+                    <a href="https://plus.google.com/106611725945858700349" target="_blank">
+                        <img src="../../../assets/images/review-google.png" class="img-responsive">
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6 text-center">
+                    <a href="https://www.facebook.com/digitallync/" target="_blank">
+                        <img src="../../../assets/images/review-fb.png" class="img-responsive">
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6 text-center">
+                    <a href="https://www.youtube.com/channel/UCFjwj6fXX3HM9DtDbnB83NQ" target="_blank">
+                        <img src="../../../assets/images/review-youtube.png" class="img-responsive">
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6 text-center">
+                    <a href="https://www.instagram.com/_digitallync_/" target="_blank">
+                        <img src="../../../assets/images/review-instagram.png" class="img-responsive">
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6 text-center">
+                    <a href="https://twitter.com/digitallync/" target="_blank">
+                        <img src="../../../assets/images/review-twitter.png" class="img-responsive">
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6 text-center">
+                    <a href="https://www.linkedin.com/company-beta/10702035/" target="_blank">
+                        <img src="../../../assets/images/review-linkedin.png" class="img-responsive">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

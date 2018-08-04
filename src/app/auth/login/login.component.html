@@ -1,0 +1,70 @@
+<!-- <aside style="height:100vh">
+  <main style="background: url(../../../assets/images/site-bg.png) no-repeat center center fixed; background-size: cover;">
+    <h1 class="text-center" style="color:#fff">Full Stack Work Shop</h1>
+    <div style="position:absolute;top:48%;left:30px;">
+      <h2 style="color:#fff">Digital Lync
+        <br>Welcomes you to</h2>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end center" class="padding" style="height:100vh;margin-right:60px;">
+      <mat-card class="login-card padding-nill" style="position:fixed" style="border-radius: 8px;width:38%;height:50%;">
+        <mat-card-content>
+          <div fxLayout="row wrap" fxLayoutAlign="center center">
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="50">
+              <form novalidate autocomplete="off" [formGroup]="UserDetailsForm">
+                <mat-card style="box-shadow: none;border-radius:16px;">
+                  <mat-card-content>
+                    <div fxLayout="row wrap" fxLayoutAlign="center end">
+                      <h3 fxFlex="100" class="text-center" style="color:#1b80c3;padding-bottom: 24px;">
+                        LOGIN
+                      </h3>
+                      <div fxLayout="row wrap" fxLayoutAlign="center end">
+                        <mat-form-field fxFlex="100">
+                          <input matInput placeholder="Email" required [(ngModel)]="login.email"  formControlName="email">
+                          
+                        </mat-form-field>
+                        <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('required')">
+                          Email required
+                        </span>
+                        <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('pattern')">
+                          Enter valid Email
+                        </span>
+                        <mat-form-field fxFlex="100">
+                          <input matInput required name="password" placeholder="Enter your password"  type="password"
+                            [(ngModel)]="login.password"  formControlName="password">
+                        </mat-form-field>
+                        <span class="error" *ngIf="UserDetailsForm.get('password').touched && UserDetailsForm.get('password').hasError('required')">
+                          Password required
+                        </span>
+                        <span class="error" *ngIf="UserDetailsForm.get('password').touched && UserDetailsForm.get('password').hasError('minlength')">
+                          Minimum 5 Characters
+                        </span>
+                        
+                        <div fxFlex="row" fxLayoutAlign="start start">
+                          <div fxFlex="100" fxLayoutAlign="center center">
+                            <a (click)="signup()" style="font-size: 18px;">Register Now</a>
+                          </div>
+                        </div>
+                        <div fxFlex="row" fxLayoutAlign="start start">
+                          <div fxFlex="100" fxLayoutAlign="center center">
+                            <button type="submit" mat-raised-button class="proceed-btn" (click)="Login()" [disabled]="UserDetailsForm.invalid">
+                              SIGN IN
+                            </button>
+                          </div>
+                        </div>
+                        <div fxFlex="row" fxLayoutAlign="start start">
+                          <div fxFlex="100" fxLayoutAlign="center center">
+                            <div class="status" *ngIf="showServerError">{{showServerError}}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </mat-card-content>
+                </mat-card>
+              </form>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </main>
+</aside> -->

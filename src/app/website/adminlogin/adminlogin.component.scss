@@ -1,0 +1,270 @@
+.outer-wrapper { 
+    display: table;
+    width: 100%;
+    height: 100%;
+    }
+    
+    .inner-wrapper {
+      display:table-cell;
+      vertical-align:middle;
+      padding:15px;
+    }
+
+#loginform{
+    h1{
+    font-size: 42px;
+    padding-bottom: 18px;
+}
+p{
+    font-size: 20px;
+    padding-bottom: 18px;
+}
+}
+
+/* CONTENT */
+.login-form-content {
+	background-color: #FFFFFF;
+	padding: 25px 25px;
+}
+/* FROM INPUT */
+.login-form .input-container .input{
+    border-bottom: 1px solid #CCCCCC;
+    margin-top: 15px;
+    font-size: 15px;
+    // color: #9e9e9e;
+    padding-bottom: 5px;
+}
+.login-form .input-container{
+    height: 60px;
+}
+.login-form .input {
+	border: 0;
+	width: 100%;
+}
+.login-form .input:focus {
+    outline: none;
+}
+
+.orange {
+    color: #FFA500;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-height: 600px) {
+	.login-form-container {
+		margin-top: 0 !important;
+		top: 10px !important;
+	}
+}
+@media screen and (max-width: 400px) {
+	.login-form-container {
+		left: 5px;
+		margin-left: 5px;
+		min-width: 283px;
+		right: 10px;
+		margin-bottom: 10px;
+		width: auto;
+	}
+	.login-form .input {
+		width: 140px;
+	}
+	.socmed-login .socmed-btn i {
+		margin-right: 5px;
+		width: 19px;
+	}
+}
+.input-container span{
+    color:red !important;
+    
+  }
+.input-container span:after{
+    color:red !important;
+    font-size: 12px;
+    content:'*';
+    display: inline;
+  }
+
+  .get-in-touch{
+    text-align: center;
+    margin: auto;
+    color: #f5a623 !important;
+    padding-right: 0px !important;
+    margin-top: 6px;
+    border-radius: 100px;
+    border: solid 1px green;
+    cursor: pointer;
+    /* padding: 20px; */
+    width: 150px;
+    padding: 10px 0px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.green-color{
+    background-color: #009900 !important;
+    color:white !important;
+}
+@media only screen and (max-width: 375px) {
+    .input-container span{
+        color:red !important;
+        display: block;
+        
+      }
+      .input-container .input{
+        width:100% !important;
+        
+      }
+}
+
+
+// carousels
+.carousel {
+    margin: 50px auto;
+}
+
+.carousel .item {
+    color: #999;
+    overflow: hidden;
+    min-height: 120px;
+    font-size: 13px;
+}
+
+.carousel .media {
+    position: relative;
+    padding: 0 0 0 20px;
+    margin-left: 20px;
+}
+
+.block {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+}
+
+.carousel .media img {
+    width: 75px;
+    height: 75px;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff;
+}
+
+.carousel .testimonial {
+    color: #fff;
+    position: relative;
+    // background: #0ecbb5;
+    background:orange;
+    padding: 15px;
+    margin: 0 0 20px 20px;
+}
+
+.carousel .testimonial::before,
+.carousel .testimonial::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+}
+
+.carousel .testimonial::before {
+    width: 20px;
+    height: 20px;
+    background: #9b9b9b;
+    box-shadow: inset 12px 0 13px rgba(0, 0, 0, 0.5);
+}
+
+.carousel .testimonial::after {
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #fff;
+    border-left-color: #fff;
+}
+
+.carousel .item .row>div:first-child .testimonial {
+    margin: 0 20px 20px 0;
+}
+
+.carousel .item .row>div:first-child .media {
+    margin-left: 0;
+}
+
+.carousel .testimonial p {
+    text-indent: 40px;
+    line-height: 21px;
+    margin: 0;
+
+}
+
+.carousel .testimonial p::before {
+    /*content: '\94';*/
+    color: #fff;
+    font-weight: bold;
+    font-size: 68px;
+    line-height: 70px;
+    position: absolute;
+    left: -25px;
+    top: 0;
+}
+
+.carousel .overview {
+    padding: 3px 0 0 15px;
+}
+
+.carousel .overview .details {
+    padding: 5px 0 8px;
+}
+
+.carousel .overview b {
+    text-transform: uppercase;
+    color: #ff5555;
+}
+
+.carousel .carousel-control {
+    width: 30px;
+    height: 30px;
+    background: #666;
+    text-shadow: none;
+    top: 4px;
+}
+
+.carousel-control i {
+    font-size: 16px;
+}
+
+.carousel-control.left {
+    left: auto;
+    right: 40px;
+}
+
+.carousel-control.right {
+    left: auto;
+}
+
+.carousel-indicators {
+    bottom: -80px;
+}
+
+.carousel-indicators li,
+.carousel-indicators li.active {
+    width: 18px;
+    height: 18px;
+    border-radius: 0;
+    margin: 1px 4px;
+}
+
+.carousel-indicators li {
+    background: #e2e2e2;
+    border: 4px solid #fff;
+}
+
+.carousel-indicators li.active {
+    color: #fff;
+    // background: #0ecbb5;
+    background:orange;
+    border: 5px double;
+}

@@ -1,0 +1,52 @@
+<section class="coursebanner" style="background-image: url('../../../assets/images/blog_banner.png');">
+  <div class="container-fluid Aligner">
+      <div class="row Aligner-item">
+          <div class="col-md-offset-6 col-md-10 col-sm-12 col-xs-12">
+              <h3 class="heading">We make a Living by what we get, 
+				  <br>we make a life by what we give.</h3>
+          </div>
+          <!-- <div class="col-md-5"></div> -->
+      </div>
+  </div>
+</section>
+<section>
+	<div class="container section-padding text-center">
+		<div class="row">
+			<h2> <span style="color:grey;">Learn More on</span>	Every Thing</h2>
+			
+		</div>
+	</div>
+</section>
+<div class="page-blog-list">
+
+		<div class="inner">
+			
+			<div id="np-load-area">
+
+				<ul class="list">
+				
+										
+					<li id="p-58768" class="post-58768 np_podcast type-np_podcast status-publish hentry" *ngFor="let item of blogsData" (click)="pageNavigate(item.slug)">
+
+						<a [routerLink]="['/blog/'+item.slug]">
+
+														
+							<p class="img-p">
+
+								<img class="lazy lazyloaded"  [src]="imageHost+item.image" data-lazy-src="block.png" width="520px" height="272px" alt="How to Audit Your Content in 5 Minutes | Ep. #619">								
+							</p>
+							
+							<h2 class="size-24 title" style="font-family: 'Open Sans', sans-serif;font-weight: 600; color: #159bc5;">{{item.description}}</h2>
+						</a>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<p>
+								<i class="fa fa-eye" style="padding:4px;"></i>{{item.views}}</p>
+						</div>
+
+					</li>
+					</ul>
+					</div>
+
+		</div>
+
+	</div>

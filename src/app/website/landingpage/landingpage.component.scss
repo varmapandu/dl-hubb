@@ -1,0 +1,411 @@
+@media only screen and (min-width: 992px) {
+    .courses {
+        margin-top: 150px;
+        background-image: url('../../../assets/images/coursesbg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+@media only screen and (max-width: 777px) {
+    .media-style figcaption{
+        text-align: center !important;
+    } 
+    .media-style .logo-brand img{
+        height: 142px;
+        width: 142px;
+    }
+}
+@media only screen and (max-width: 649px) {
+    .media-style figcaption{
+        text-align: center !important;
+    } 
+    .media-style .logo-brand img{
+        height: 141.33px;
+        width: 141.33px;
+    }
+}
+@media only screen and (max-width: 602px) {
+    .media-style figcaption{
+        text-align: center !important;
+    } 
+    .media-style .logo-brand img{
+        height: 126px !important;
+        width: 126px;
+    }
+}
+@media only screen and (max-width: 581px) {
+    .media-style figcaption{
+        text-align: center;
+    } 
+    .media-style .logo-brand img{
+        height: 119.33px !important;
+        width: 119.33px;
+    }
+}
+@media only screen and (max-width: 624px) {
+    .media-style figcaption{
+        text-align: center !important;
+    } 
+    .media-style .logo-brand img{
+        height: 133.33px;
+        width: 133.33px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .dl-special{
+        margin-top: 0px !important;
+    }
+    .how-are-we-different-images{
+        width: 96px;
+        height: 100px;
+    }
+    .font-padding{
+        padding: 8px;
+    }
+}
+@media only screen and (max-width: 561px) {
+    .media-style figcaption{
+        text-align: center !important;
+    } 
+    .media-style .logo-brand img{
+        height: 112px !important;
+        width: 112px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .media-style figcaption{
+        text-align: center !important;
+    } 
+     .logo-brand img{
+        height: 31.98px !important;
+        max-width: 31.98px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .media-style figcaption{
+        text-align: center !important;
+    } 
+    .media-style .logo-brand img{
+        height: 50.33px !important;
+        width: 50.33px;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .media-style figcaption{
+        text-align: center !important;
+    } 
+    .media-style .logo-brand img{
+        height: 63.33px !important;
+        width: 63.33px;
+    }
+}
+@media only screen and (width: 360px) {
+    .media-style figcaption{
+        text-align: center !important;
+    } 
+    .media-style .logo-brand img{
+        height: 45.66px !important;
+        width: 45.66px;
+    }
+}
+@media only screen and (max-width: 441px) {
+    .media-style figcaption{
+        text-align: center !important;
+    } 
+    .media-style .logo-brand img{
+        height: 62.33px !important;
+        width: 62.33px;
+    }
+}
+@media only screen and (min-width:321px) and (max-width: 384px) {
+    .media-style figcaption{
+        text-align: center !important;
+    } 
+    .media-style .logo-brand img{
+        height: 53.33px !important;
+        width: 53.33px;
+    }
+}
+@media only screen and  (min-width:320px) and  (max-width: 500px) {
+    .how-are-we-different-images{
+        width: 76px !important;
+        height: 80px !important;
+    }
+    .font-padding{
+        padding: 8px !important;
+        font-size: 7px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .media-style figcaption{
+        text-align: center !important;
+    } 
+    .media-style .logo-brand img{
+        height: 31.98px !important;
+        width: 31.98px !important;
+    }
+}
+@media only screen and (width: 360px) {
+   
+    .media-style .logo-brand img{
+        height: 45.33px !important;
+        width: 45.33px !important;
+    }
+}
+@media only screen and (min-width:320px) and (max-width: 410px) {
+    .dlogo img {
+        height: 51px !important;
+    }
+    .border-bottom {
+        border-bottom: none !important; 
+    }
+    .border-right{
+        border-right: none !important;
+    }
+}
+@media only screen and (min-width:411px) and (max-width: 500px) {
+    .dlogo img {
+        height: 67px !important;
+    }
+    .border-bottom {
+        border-bottom: none !important; 
+    }
+    .border-right{
+        border-right: none !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .media-style figcaption{
+        text-align: center !important;
+    } 
+    // .media-style .logo-brand img{
+    //     height: 53.33px !important;
+    //     width: 53.33px;
+    // }
+}
+
+// .dlogo img {
+//     height: 130px;
+//     width: 118px;
+// }
+
+.course-img a,
+.course-img a:hover {
+    position: relative;
+    text-decoration: none;
+    color: #222c37;
+    font-weight: 600;
+}
+
+.courses-col1~a.course-img:nth-child(1) {
+    background-color: red !important;
+}
+
+@media only screen and (min-width:992px) {
+
+    .bigdata {
+        top: -14px;
+        left: 36px;    
+    }
+
+    .fullstack {
+        right: 62px;
+        top: -36px;    
+    }
+
+    .blockchain {
+        right: 40px;
+        top: 28px;
+    
+    }
+
+    .devops {
+        top: -112px;
+    left: 181px;
+    }
+
+    .datascience {
+        left: 36px;
+    top: -108px; 
+    }
+    .dmarketing {
+        left: 25px;
+        top: -50px;      
+    }
+    .python {
+        top: 76px;
+    right: 10px;
+    }
+    .aws {
+        top: 155px;
+    right: 220px;
+
+    }
+    .dlogo {
+        top: 19px;
+        left: 20px;
+    }
+}
+
+figure {
+    margin: 9px !important;
+}
+// .dl-special .figure img:hover{
+//     box-shadow: 2px 4px 8px 0 rgba(46,61,73,.2);
+//     transition: all ease-in-out .2s;
+//     border-radius: 100%;
+//     padding: 10px;
+
+// }
+.dl-special .figure img{
+    transition: all ease-in-out .2s;
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+}
+
+.section-padding {
+    padding: 40px;
+}
+
+.color1caba0 {
+    color: #1caba0;
+}
+.whydltSpl{
+    h4{
+        color: #1caba0;
+        font-weight : 600;
+    }
+}
+.figure{
+    figcaption{
+        font-weight: bold;
+    }
+}
+.custom-caption-size figcaption{
+    font-size: 5px;
+    font-weight: bold;
+}
+//with hover
+.courses-col1 a:hover img,
+.courses-col1 a:hover .figure-caption {
+    transform: translate(0px, -8px);
+    transition: all ease-in-out .2s;
+}
+
+.courses-col2 a:hover img,
+.courses-col2 a:hover .figure-caption {
+    transform: translate(0px, -8px);
+    transition: all ease-in-out .2s;
+}
+
+.courses-col3 a:hover img,
+.courses-col3 a:hover .figure-caption {
+    transform: translate(0px, -8px);
+    transition: all ease-in-out .2s;
+}
+//without hover
+.courses-col1 a img,
+.courses-col1 a .figure-caption {
+    transition: all ease-in-out .2s;
+}
+
+.courses-col2 a img,
+.courses-col2 a .figure-caption {
+    transition: all ease-in-out .2s;
+}
+
+.courses-col3 a img,
+.courses-col3 a .figure-caption {
+    
+    transition: all ease-in-out .2s;
+}
+// .zoom {
+//     padding: 50px;
+//     background-color: green;
+//     transition: transform .2s;
+//     width: 200px;
+//     height: 200px;
+//     margin: 0 auto;
+// }
+
+// .zoom img {
+//     transition: transform .2s;
+// }
+// .zoom img:hover {
+//     -ms-transform: scale(1.2); /* IE 9 */
+//     -webkit-transform: scale(1.2); /* Safari 3-8 */
+//     transform: scale(1.2); 
+// }
+
+.dl-special {
+    margin-top: 100px;
+    //background-color: #f4fafa;
+}
+
+.trending-section {
+    padding-bottom: 60px;
+}
+
+.dl-special .row {
+    margin-top: 40px;
+}
+.border-bottom{
+    border-bottom: solid 1px #e5e5e5;
+}
+.border-right{
+    border-right: solid 1px #e5e5e5;
+}
+.procnum {
+    height: 38px;
+    width: 38px;
+    overflow: hidden;
+    border: 1px solid;
+    padding-top: 10px;
+    border-radius: 50%;
+    text-align: center;
+    margin: auto;
+   color: #1caba0;
+}
+
+.Linedot {
+    width: 9px;
+    height: 9px;
+    background-color: #d5dedd;
+    border-radius: 50%;
+    margin: auto;
+}
+.how-are-we-different-images{
+    width: 141px;
+    height: 131px;
+}
+.font-padding{
+    padding: 20px;
+}
+//our branches ------- our partners ----- our reviews //
+#we-partner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+ }
+ #we-partner img{
+     margin: 20px auto;
+ }
+.branches img{
+	width: 180px;
+	height: 220px;
+    margin: 20px auto;
+}
+.carousel-indicator-circle>ol>li{
+	color:red;
+}
+.carousel-indicators li {
+    display: inline-block;
+    background-color: transparent;
+    margin-bottom: -50px;  
+    border:1px solid grey;
+}
+.carousel-indicators .active {
+    background-color: grey;
+    margin-bottom: -50px; 
+}

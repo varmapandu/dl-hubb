@@ -1,0 +1,47 @@
+.appointment-phone {
+    position:fixed;
+    top:78%;
+    left:0;
+    z-index:11;
+    cursor:pointer;
+  }
+  .appointment-phone a {
+    position:relative;
+    display:block;
+  }
+  .appointment-phone a img {
+    width:80px;
+    height: 80px;
+    margin-left: -10px;
+    // position:fixed;
+    // z-index:1;
+  }
+  .appointment-phone a  .number-move {
+      font-size: 13px;
+      text-transform: uppercase;
+      position: absolute;
+      top: 0;
+      right: 0px;
+      top: 8px;
+      width: 240px;
+      text-align: center;
+      padding: 9px;
+      padding-top: 0px;
+      color: black;
+      border-radius: 6px;
+      z-index: -1;
+      box-shadow: 1px 0px 5px 0 rgba(0, 0, 0, .5);
+      line-height: 25px;
+      margin-right: 10px;
+      background-color:#fff;
+  }
+  .appointment-phone a:hover .number-move {
+      right:-240px;
+  }
+  .appointment-phone a .number-move,
+  .appointment-phone a:hover .number-move {
+    -webkit-transition:all ease-out 0.5s;
+    -moz-transition:all ease-out 0.5s;
+    -o-transition:all ease-out 0.5s;
+    transition:all ease-out 0.5s;
+  }

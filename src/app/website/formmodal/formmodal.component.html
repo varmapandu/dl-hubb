@@ -1,0 +1,57 @@
+<li class="nav-item enroll-now-button Aligner" style="list-style-type:none;font-size:16px;margin:auto;">
+  <a href="#" class="nav-link" data-toggle="modal" data-target="#login-modal" style="text-decoration:none;font-weight:bold">{{buttonText}}</a>
+</li>
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog Aligner" style="height:100%">
+    <div class="loginmodal-container">
+      <div class="text-center">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <form class="form panel-body" role="form" class="enroll-now-form" novalidate autocomplete="off" [formGroup]="UserDetailsForm">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h3 class="font-weight-300 theme-font">ENROLL NOW</h3>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="name">Name</label>
+          <input class="form-control" name="name" required autofocus placeholder="Name" type="text" required [(ngModel)]="profile.name"
+            formControlName="name" />
+          <span class="error" *ngIf="UserDetailsForm.get('name').touched && UserDetailsForm.get('name').hasError('required')">
+            Name required
+          </span>
+          <span class="error" style="color:#fff" *ngIf="UserDetailsForm.get('name').touched && UserDetailsForm.get('name').hasError('pattern')">
+            Invalid Name
+          </span>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="email">Email</label>
+          <input class="form-control" name="email" required autofocus placeholder="Your e-mail" type="text" [(ngModel)]="profile.email"
+            formControlName="email" />
+          <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('required')">
+            Email required
+          </span>
+          <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('pattern')">
+            Enter valid Email
+          </span>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="mobile">Mobile</label>
+          <input class="form-control" name="mobile" required autofocus placeholder="Mobile" type="text" [(ngModel)]="profile.mobile"
+            formControlName="mobile" />
+          <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('required')">
+            Mobile required
+          </span>
+          <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('pattern')">
+            Invalid Mobile Number
+          </span>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <button class="submit-btn" type="submit" (click)="onSubmit()" data-dismiss="modal" [disabled]="!UserDetailsForm.valid">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

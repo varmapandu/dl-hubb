@@ -1,0 +1,75 @@
+.course-rating{
+    width: 30px;
+}
+  #my-row {
+    display: table;
+ }
+ 
+ #my-row .panel {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+ }
+  .sticky-container  .scroll-content {
+    border: 1px solid #333;
+    //background-image: linear-gradient(rgba(255, 255, 255, 1) 50%, transparent 50%, transparent);
+    background-size: 50px 50px;
+    height: 100vh !important;
+  }
+  .sticky-float-right {
+    background-color: rgba(0,255,0, .2);
+  }
+
+  div[ngui-sticky] {
+    // min-width: 400px;
+    text-align: center;
+    // background: #333;
+    color: #fff;
+    // border: 1px solid #333;
+    padding: 10px;
+  }
+
+
+  .affix-top {
+    position: absolute;
+  }
+  
+  .affix {
+    top: 0px;
+  }
+  
+  .affix, 
+  .affix-bottom {
+      width: 215px;
+  }
+  
+  .affix-bottom {
+    position: absolute;
+  }
+
+  .enroll-now-form{
+    //margin-top: 10px;
+    h3{
+      font-weight: bold;
+      letter-spacing: 0.6px;
+      text-align: center;
+      color: #57b5ac;
+    }
+    button{
+      width: 120px;
+      height: 40px;
+      border-radius: 3px;
+      background-color: #57b5ac;
+      color: white;
+    }
+  }
+  .course-page-enroll-form{
+    background-color: rgb(255, 255, 255);
+    /* margin-top: 20px; */
+    border-radius: 5px;
+    /* box-shadow: rgba(0, 0, 0, 0.4) 2px 1px 8px 0px; */
+    width: 280px;
+    padding: 20px;
+    z-index: 9999;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }

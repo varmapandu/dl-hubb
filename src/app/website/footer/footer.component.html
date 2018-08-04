@@ -1,0 +1,160 @@
+<!-- <section style="
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient(348deg, #7fdeea, #07cab2);
+" id="footer-bottom">
+  <div class="container">
+    <div class="row">
+
+    </div>
+  </div>
+</section> -->
+
+
+<section style="
+width: 100%;
+height: 300px;
+background-image: linear-gradient(348deg, #7fdeea, #07cab2);
+" id="footer-bottom">
+  <footer>
+
+    <!-- <div class="row"> -->
+    <!-- <div class="col-md-6 col-sm-6 xs-text-center">
+          <a href="">
+           
+          </a> -->
+    <!-- </div> -->
+    <!-- <div class="col-md-6 col-sm-6 text-right xs-text-center social-links">
+          <a href="">
+            <img src="../../../assets/images/facebook.png" class="img-responsive s-logo">
+          </a>
+          <a href="">
+            <img src="../../../assets/images/twitter.png" class="img-responsive s-logo">
+          </a>
+          <a href="">
+            <img src="../../../assets/images/linkedin.png" class="img-responsive s-logo">
+          </a>
+          <a href="">
+            <img src="../../../assets/images/googleplus.png" class="img-responsive s-logo">
+          </a>
+          <a href="">
+            <img src="../../../assets/images/instagram.png" class="img-responsive s-logo">
+          </a>
+          <a href="">
+            <img src="../../../assets/images/youtube.png" class="img-responsive s-logo">
+          </a>
+        </div> -->
+    <!-- </div> -->
+    <div class="container">
+      <div class="row f-qlinks">
+        <div class="col-md-2 footerlogo">
+          <img src="../../../assets/images/flogo.png" alt="Digital Lync logo">
+        </div>
+        <div class="col-md-2 ">
+          <h4>COMPANY</h4>
+          <p>
+            <a href="#">About</a>
+          </p>
+          <p>
+            <a routerLink="/blogs">Blogs</a>
+          </p>
+          <!-- <p>
+            <a href="#">Jobs</a>
+          </p> -->
+
+        </div>
+        <div class="col-md-2">
+          <h4>QUICK LINKS</h4>
+          <p>
+            <a routerLink="courses">Courses </a>
+          </p>
+          <p>
+            <a routerLink="/events">Events </a>
+          </p>
+          <!-- <p>
+            <a href="https://www.digital-lync.com/products">Innovation</a>
+          </p>
+          <p>
+            <a href="https://www.digital-lync.com/collab">Incubation</a>
+          </p> -->
+        </div>
+        <div class="col-md-3">
+          <h4>DROP A MESSAGE</h4>
+          <form novalidate autocomplete="off" [formGroup]="UserDetailsForm">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Name</label>
+              <input type="text" class="form-control" name="name" placeholder="Enter Name" required [(ngModel)]="profile.name" formControlName="name">
+              <span class="error" style="color:#fff" *ngIf="UserDetailsForm.get('name').touched && UserDetailsForm.get('name').hasError('required')">
+                Name required
+              </span>
+              <span class="error" style="color:#fff" *ngIf="UserDetailsForm.get('name').touched && UserDetailsForm.get('name').hasError('pattern')">
+                Invalid Name
+              </span>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Email</label>
+              <input type="email" class="form-control" name="email" id="" placeholder="abcd@gmail.com" required [(ngModel)]="profile.email"
+                formControlName="email">
+              <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('required')">
+                Email required
+              </span>
+              <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('pattern')">
+                Enter valid Email
+              </span>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Message</label>
+              <textarea style="color:#fff" class="form-control" placeholder="message" [(ngModel)]="profile.message" [ngModelOptions]="{standalone: true}"></textarea>
+            </div>
+
+            <button type="submit" (click)="onSubmit()" [disabled]="!UserDetailsForm.valid" class="btn btn-primary footersubmit center-block">Submit</button>
+          </form>
+        </div>
+        <div class="col-md-3 contactus">
+          <h4>CONTACT US</h4>
+          <p>
+            <span>
+              <img src="../../../assets/images/phone.svg" alt="phone number">
+            </span> &nbsp;
+            <a href="tel:+91 70938 61616">+91 70938 61616</a>
+          </p>
+          <p>
+            <span>
+              <img src="../../../assets/images/message.svg" alt="mail address">
+            </span> &nbsp;
+            <a href="mailto:info@digitallynctech.com?Subject=Hello%20again" target="_top">info@digitallynctech.com</a>
+          </p>
+          <p>
+            <a href="https://plus.google.com/106611725945858700349" target="_blank">
+              <img src="../../../assets/images/googleplus.svg" alt="googleplus">
+            </a>
+            <a href="https://www.facebook.com/digitallync/" target="_blank">
+              <img style="height:32px;width:32px;margin-top:5px;" class="fbfooter" src="../../../assets/images/facebookftr.png" alt="facebook">
+            </a>
+            <a href="https://www.instagram.com/_digitallync_/" target="_blank">
+              <img src="../../../assets/images/instagram.png" alt="instagram">
+            </a>
+            <a href="https://www.linkedin.com/company-beta/10702035/" target="_blank">
+              <img src="../../../assets/images/linkedin.svg" alt="linkedin">
+            </a>
+            <a href="https://www.youtube.com/channel/UCFjwj6fXX3HM9DtDbnB83NQ" target="_blank">
+              <img src="../../../assets/images/youtube.svg" alt="youtube">
+            </a>
+            <a href="https://twitter.com/digitallync/" target="_blank">
+              <img style="height:32px;width:32px;margin-top:5px;" class="twtrfooter" src="../../../assets/images/twitterftr.png" alt="twitter">
+            </a>
+          </p>
+          <button class="btn btn-default" routerLink="/adminlogin">Admin Login</button>
+        </div>
+      </div>
+    </div>
+    <!-- <section class="copyrightsection ">
+    <div class="row">
+      <div class="col-md-12 ">
+        <p style="text-align:center;">©2018 - Digital Lync Technologies. All right reserved</p>
+      </div>
+    </div>
+   </section> -->
+  </footer>
+
+</section>

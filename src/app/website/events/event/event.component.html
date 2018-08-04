@@ -1,0 +1,82 @@
+<section class="programbanner" [style.backgroundImage]="'url('+imageHost+bannerImage.url+')'" style="background-position: center;">
+  <div class="container Aligner">
+    <div class="row Aligner-item">
+      <div class="col-md-8">
+        <h1 style="color:#fff" class="wow slideInLeft"></h1>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="event-address" [style.background-color]="eventData.event.color">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-9 col-xs-12">
+        <ul style="padding-left:20px;">
+          <li>
+            <h1>{{eventData.event.name}}</h1>
+          </li>
+          <li><img src="/assets/images/calender.png"/> {{eventData.event.eventDate}} | {{eventData.event.timing}}</li>
+          <li><img src="/assets/images/location.png"/>{{eventData.event.address}}</li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-xs-9">
+        <div class="get-direction click">
+          <a href="" (click)="getDirections()"
+            value="Get Directions" target="_blank">
+            <button>
+              <img src="/assets/images/getdirection.svg">Get Direction</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="ticket padding15" *ngIf = "eventData.event.eventStatus == 'Upcoming'">
+  <div class="container">
+    <div class="row padding25">
+      <div class="card" style="margin-bottom:0px;">
+        <div class="col-md-9" style="border-style: dashed; border-color:#2bb596; padding: 10px;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="col-md-3 text-center ticketColumn">
+                <p>Book An Event</p>
+              </div>
+              <div class="col-md-4  text-center ticketColumn">
+                <div class="price" style="font-size:18px;">
+                  <p class="">INR {{eventData.event.rate}}
+                    <sub>(Each)</sub>
+                  </p>
+                </div>
+              </div>
+              <!-- <div class="col-md-3 text-center rectangle ticketColumn">
+              <select>                 
+                  
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select> 
+              </div> -->
+              <div class="col-md-4 text-center" *ngIf="eventData.event.eventStatus== 'Upcoming'">
+                <div class="pay" >
+                  <a href="{{eventData.event.eventsLink}}" target="blank"><button type="button">Pay Online</button></a>
+                </div>
+                <div class="event" style="margin-top: 4px;">
+                  <app-formmodal [page]="eventData.page" [buttonText]="buttonText"></app-formmodal>
+                </div>
+              </div>
+              <div class="col-md-4 text-center" *ngIf="eventData.event.eventStatus== 'completed'">
+                  <div class="">
+                    <button type="button" class="btn btn-danger">Event Completed</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<app-about-event [eventData]="eventData"></app-about-event>

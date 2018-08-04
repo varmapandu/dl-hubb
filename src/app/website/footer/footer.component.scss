@@ -1,0 +1,99 @@
+.f-qlinks a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    text-align: left;
+    margin: 0px;
+  }
+  .form-group span:after {
+  color: white !important; 
+    font-size: 12px;
+    content: '*';
+    display: inline;
+}
+  // .f-logo{
+  //   height: 50px;
+  //   margin-bottom: 10px;
+  //   display: inline-block;
+  // }
+  // .s-logo{
+  //   width: 40px;
+  //   margin-bottom: 10px;
+  //   margin-top: 5px;
+  //   display: inline-block;
+  // }
+  // footer{  
+  //   background-color: #333333;
+  //   padding-bottom: 30px;
+  //   padding-top: 30px;
+  // }
+  footer h4{
+    font-size: 20px;
+    font-weight: bold !important;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+  }
+  footer p{
+    font-size: 16px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.88;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    margin: 0px;
+  }
+  footer form label{
+    color: white;
+  }
+  .social-links{
+    a {
+      padding: 0px 2px;
+    }
+  }
+  .footerlogo img{
+    width: 168px;
+  height: 41px;
+  }
+  .form-control{
+    background-color: transparent;
+  }
+  .contactus img{
+    height: 24px;
+    width: 24px;
+  }
+  .contactus p{
+    margin-top: 10px;
+  }
+  .footersubmit{
+    background-color: #ffffff;
+    color: #28393e;
+  }
+  footer .form-group {
+    height: 80px;
+}
+
+.form-group input, span{
+  color: #fff !important;
+}
+.twtrfooter,.fbfooter{
+  height: 33px !important;
+  width: 33px !important;
+}
+// .copyrightsection{
+//   background-color: #000000;
+//   padding: 15px;
+//   margin-top: 20px;
+//   // text-align: center !important;
+// }

@@ -1,0 +1,208 @@
+<!-- <section class="programbanner" [style.backgroundImage]="'url('+ imageHost+bannerImage.url +')'">
+    <div class="container Aligner">
+        <div class="row Aligner-item">
+            <div class="col-md-8">
+                <h1 class="wow slideInLeft" style="width:80%;color:white">{{programData.program.description}}</h1>
+            </div>
+            <div class="col-md-12 padding15">
+                <form class="form panel-body text-center" role="form" class="enroll-now-form" novalidate autocomplete="off" [formGroup]="UserDetailsForm">
+                    <div class="form-group">
+                        <input name="email" required placeholder="Email" type="text" required class="contact-input" [(ngModel)]="profile.email"
+                            formControlName="email" /> -->
+                            <!-- <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('required')">
+                                Email required
+                              </span>
+                              <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('pattern')">
+                                Enter valid Email
+                              </span> -->
+                        <!-- <button class="contact-button btn" (click)="onSubmit()" [disabled]="!UserDetailsForm.valid">Submit</button> -->
+                       
+                        <!-- <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('required')">
+                                Email required
+                        </span>
+                            <span class="error" style="color:#fff" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('pattern')">
+                                Invalid Email
+                            </span> -->
+                    <!-- </div> -->
+                   
+                    <!-- <input type="text" placeholder="Enter your Email" class="contact-input">
+                    <!-- <span><button class="contact-button" (click)="onSubmit()">Submit</button></span> -->
+                <!-- </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a routerLink="/">Home </a>
+                <i class="fa fa-angle-right"></i>
+                <a routerLink="/future">Programs </a>
+                <i class="fa fa-angle-right"></i>
+                <h1 class="font-size-12 slugName" style="display:inline"><a class="captilize-text">{{programData.program.slug}} </a></h1>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- <section>
+    <div class="container section-padding text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 style="color:#57b5ac">What Will You Learn ?</h3>
+                <p style="color:#495358;font-size:16px">{{programData.program.what}}</p>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- <section>
+    <div class="container section-padding text-center">
+        <h3 style="color:#57b5ac" class="padding15">We Make You Job Ready</h3>
+        <div class="row padding15">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="circle" style="background-image: linear-gradient(132deg, #3dbdb6, #0089ce);">
+                    <img src="../../../assets/images/technology.svg" alt="Technology">
+                </div>
+                <h5>TECHNOLOGY STACK</h5>
+                <p class="comma"><span *ngFor="let item of programData.program.techStack">{{item}} </span></p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="circle" style="background-image: linear-gradient(309deg, #7a86cc, #9facf8);">
+                    <img src="../../../assets/images/duration.svg" alt="Course Duration">
+                </div>
+                <h5>DURATION</h5>
+                <p>{{programData.program.duration}} </p>
+                <p> {{programData.program.hours}} Hours / Week</p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="circle" style="background-image: linear-gradient(to bottom, #f3778f, #f26a95 44%, #f15a9d);">
+                    <img src="../../../assets/images/live_projects.svg" alt="Live Projects">
+                </div>
+                <h5>LIVE PROJECTS</h5>
+                <p>2
+                    <sup>+</sup>
+                </p> -->
+                <!-- <p>Live Projects</p> -->
+            <!-- </div>
+        </div>
+        <div class="row padding15">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="circle Aligner" style="background-image: linear-gradient(314deg, #00e96e, #009245);">
+                    <img src="../../../assets/images/apptitute.svg" alt="Aptitude">
+                </div>
+                <h5>APTITUDE</h5>
+                <P>Learn fundamentals, 100+Practice tests, Clear Doubts.</P>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="circle" style="background-image: linear-gradient(306deg, #f24645, #ebc080);">
+                    <img src="../../../assets/images/personality_development.svg" alt="Personality Development">
+                </div>
+                <h5>PERSONAL DEVELOPMENT</h5>
+                <p>Learn power concepts of Body Language,  Attitude,  Self confidence  understanding and goal setting .</p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="circle" style="background-image: linear-gradient(140deg, #4f00bc, #f15a9d);">
+                    <img src="../../../assets/images/communication_skills.svg" alt="Communication Skills">
+                </div>
+                <h5>COMMUNICATION SKILLS DEVELOPMENT</h5>
+                <p>Get trained on Public Speaking, Presentations, Group Discussions, Interview skills.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<app-we-train [page]="page"></app-we-train>
+<section>
+    <div class="container-fluid" id="project">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 text-center project-heading padding10" style="background-color:#4a90e2">
+                <h2 class="white">Course Curriculum</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row section-padding">
+            <div class="col-md-12 text-center">
+                <h3 style="color: #d0021b;">{{programName}}</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 section-padding" style="padding-top: 0px;">
+                <div class="col-md-12 text-center">
+                    <card-a [inputData]="programData.program.techCovered"></card-a>
+                </div>
+                <div class="col-md-12 text-center">
+                    <app-modalpopup [page]="page"></app-modalpopup>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+        <div class="container section-padding text-center">
+            <div class="row">
+                <h3 class="padding15" style="color: #4a90e2;">Live Projects</h3>
+                <card-b [inputData]="programData.program.projects"></card-b>
+            </div>
+        </div>
+</section>
+<section *ngIf="biggestPro.length>0">
+    <div class="container" id="we-partner">
+        <div class="row">
+            <div class="col-md-12 text-center we-partner">
+                <h2 class="heading theme-font">Biggest Projects in {{programName}}</h2>
+            </div>
+        </div>
+        <div class="row padding20">
+            <div class="col-md-2 col-sm-4 col-xs-6" *ngFor="let item of programData.program.biggest">
+                <img [src]="imageHost+item.url" [alt]="item.alt" class="img-responsive" style="width:150px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding" style="background-image: linear-gradient(98deg, #1172d0, #1d98d6);color:#fff;">
+    <div class="container  text-center">
+        <div class="row Aligner">
+            <div class="col-md-12">
+                <h2>Digital Lync is recognized as the leading provider of technology training in
+                    <br> San Francisco, Malaysia, Hyderabad and Guntur.</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<section style="background-image: linear-gradient(to bottom right,#f7f7f7,#eafbff); padding:22px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <app-bgvideo [inputData]="videoPosterImage" [page]="page"></app-bgvideo>
+            </div>
+          </div>
+        </div>
+    </section> 
+<section class="section-padding" style="background-color: #3dbdb6;">
+    <div class="container section-padding text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="white">Know the latest updates at Digital Lync. Drop in your email here.
+                    <br> We would love to connect !</h2>
+            </div>
+            <div class="col-md-12 padding15">
+                <form class="form panel-body text-center" role="form" class="enroll-now-form" novalidate autocomplete="off" [formGroup]="UserDetailsForm">
+                    <div class="form-group">
+                        <input name="email" required placeholder="Email" type="text" required class="contact-input" [(ngModel)]="profile.email"
+                            formControlName="email" />
+                        <button class="contact-button btn" (click)="onSubmit()" [disabled]="!UserDetailsForm.valid">Submit</button> --> 
+                        <!-- <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('required')">
+                                Email required
+                        </span>
+                            <span class="error" style="color:#fff" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('pattern')">
+                                Invalid Email
+                            </span> -->
+                    <!-- </div> -->
+                    <!-- <input type="text" placeholder="Enter your Email" class="contact-input">
+                    <span><button class="contact-button" (click)="onSubmit()">Submit</button></span> -->
+                <!-- </form>
+            </div>
+        </div>
+    </div>
+</section> -->

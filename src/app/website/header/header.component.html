@@ -1,0 +1,133 @@
+<nav class="navbar navbar-default" role="navigation" id="navbar" [ngClass]="{'fixednav':fixed,'fadesh':fixed}">
+    <div class="container-fluid" id="navfluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigationbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo">
+                <img src="../../assets/images/digitallynclogo.svg" routerLink="/" width="190px" height="38px" alt="Digital Marketing Training in Hyderabad">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse pull-right" id="navigationbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="list-item animated dropdown dropbtn" style="z-index: 10005;">
+                    <a routerLink="/courses" routerLinkActive="active-link" (mouseover)="courseEffect()">Courses</a>
+                    <div class="dropdown-content hidden-xs hidden-sm" style="padding: 10px;margin-top:0px;" [ngClass]="{'fadesh':hoverEffect}">
+                        <h3 class="nav_title">
+                            <i>
+                                <img src="../../assets/images/Courses.svg" style="margin:0 5px 0 0;">
+                            </i>
+                            Courses</h3>
+                        <div class="col-md-6" *ngFor="let item of courseList">
+                            <ul class="nav_sub">
+                                <li>
+                                    <a routerLink="course/{{item.slug}}" (click)="navigateToCourse(item.slug)" class="captilize-text">{{item.name}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-item animated dropdown dropbtn" style="z-index: 10005;">
+                    <a routerLink="/programs" routerLinkActive="active-link">Programs</a>
+                    <div class="dropdown-content hidden-xs hidden-sm" style="padding: 10px;margin-top:0px;" [ngClass]="{'fadesh':hoverEffect}">
+                        <div class="col-md-4">
+                            <h3 class="nav_title" routerLink="/Placements">
+                                <i>
+                                    <img src="../../assets/images/Placement.svg" alt="">
+                                </i> Placement Programs</h3>
+                            <ul class="nav_sub">
+                                <li *ngFor="let item of programList.placement">
+                                    <a routerLink="program/{{item.slug}}" class="captilize-text" (click)="navigateToProgram(item.slug)">{{item.name}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row col-md-4">
+                        <div class="col-md-12">
+                            <h3 class="nav_title" routerLink="/Academic">
+                                <i>
+                                    <img src="../../assets/images/Academy.svg" alt="">
+                                </i> Academic Programs</h3>
+                            <ul class="nav_sub">
+                                <li *ngFor="let item of programList.academic">
+                                    <a routerLink="program/{{item.slug}}" (click)="navigateToProgram(item.slug)">{{item.name}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-12">
+                            <h3 class="nav_title" routerLink="/other">
+                                <i>
+                                    <img src="../../assets/images/Academy.svg" alt="">
+                                </i>Only at Digital Lync</h3>
+                            <ul class="nav_sub">
+                                <li *ngFor="let item of programList.other">
+                                    <a routerLink="program/{{item.slug}}" (click)="navigateToProgram(item.slug)">{{item.name}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-12">
+                            <h3 class="nav_title">
+                                <i>
+                                    <img src="../../assets/images/Academy.svg" alt="">
+                                </i>Government Program</h3>
+                            <ul class="nav_sub">
+                                <li *ngFor="let item of programList.government">
+                                    <a routerLink="program/{{item.slug}}" (click)="navigateToProgram(item.slug)">{{item.name}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h3 class="nav_title" routerLink="/Future">
+                                <i>
+                                    <img src="../../assets/images/Academy.svg" alt="">
+                                </i>FutureDegree Programs</h3>
+                            <ul class="nav_sub">
+                                <li *ngFor="let item of programList.future">
+                                    <a routerLink="program/{{item.slug}}" (click)="navigateToProgram(item.slug)">{{item.name}}</a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </li>
+                <!-- <li class="list-item animated dropdown dropbtn" style="z-index: 10005;">
+                    <a routerLink="/future" routerLinkActive="active-link" (mouseover)="courseEffect()">Future Degree</a>
+                    <div class="dropdown-content hidden-xs hidden-sm" style="padding: 10px;margin-top:0px;" [ngClass]="{'fadesh':hoverEffect}">
+                        <h3 class="nav_title">
+                            <i>
+                                <img src="../../assets/images/Courses.svg" style="margin:0 5px 0 0;">
+                            </i>
+                            Future Degree</h3>
+                        <div class="col-md-6 nav_main" *ngFor="let item of degreesList">
+                            <ul class="nav_sub">
+                                <li>
+                                    <a routerLink="future/{{item.slug}}" (click)="navigateToDegreesProgram(item.slug)" class="captilize-text">{{item.name}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li> -->
+                <li class="list-item animated fadeIn">
+                    <a routerLinkActive="active-link" href="https://www.digital-lync.com/" target="_blank">Innovation</a>
+                </li>
+                <li class="list-item animated fadeIn">
+                    <a routerLinkActive="active-link" routerLink="/blogs">Blog</a>
+                </li>
+                <li class="list-item animated fadeIn">
+                    <a routerLinkActive="active-link" routerLink="/events">Events</a>
+                </li>
+                <li class="list-item animated fadeIn">
+                    <a routerLink="/connect" routerLinkActive="active-link">Connect</a>
+                </li>
+                <li class="list-item book-an-appointment">
+                    <a routerLink="/connect">Book an Appointment</a>
+                </li>
+                <!-- <app-modalpopup></app-modalpopup> -->
+            </ul>
+        </div>
+    </div>
+</nav>

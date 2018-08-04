@@ -1,0 +1,105 @@
+<section class="coursebanner section-padding" style="background-image: url('../../assets/images/events_banner.jpg');background-color: linear-gradient(102deg, #7fdeea, #07cab2);">
+    <div class="container-fluid Aligner">
+        <div class="row">
+            <div class="col-md-12 bannerContainer">
+                <h1 class="text-center">Events at
+                    <span style=" font-weight: bold;color: #e22889;">Digital Lync.</span>
+                    <br> Make sure that you are there!</h1>
+                <p class="font-size-16 text-center hidden-xs hidden-sm white">Talk to industry leaders and know real facts. Clear your queries and walk out with a career decision.
+                    <br>Do attend our workshops and seminars. Let us meet up!</p>
+            </div>
+            <div class="col-md-12 text-center">
+                <a routerLink="/courses">
+                    <button class="btn">View All Courses</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a routerLink="/">Home </a>
+                <i class="fa fa-angle-right"></i>
+                <a routerLink="/events">Events </a>
+                <!-- <i class="fa fa-angle-right"></i> -->
+                <!-- <span>Devops</span> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Our Events</h2>
+                <p>Make it a point to attend the events at Digital Lync and connect with the IT community.</p>
+            </div>
+        </div>
+        <div class="row" *ngIf="eventsData.Hyderabad">
+            <div class="col-md-12 text-center theme-font">
+                <h3>Hyderabad</h3>
+                <div class="col-md-12 text-center">
+                    <div class="row section-padding">
+                        <div class="col-md-3 col-sm-6 col-xs-12 margin-top-bottom"  *ngFor="let item of eventsData.Hyderabad" (click)="pageNavigate(item.slug)">
+                            <a [routerLink]="['/event/'+item.slug]" class="">
+                                <div class="card hover-trans wow slideInUp">
+                                    <div class="card-image">
+                                        <img [src]="imageHost+item.image" [alt]="item.imageAlt" style="height: auto; width:100%;">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12" style="height: 120px;">
+                                                <h4 class="card-title  font-size-16" style="text-align:center;">{{item.name}}</h4>
+                                                <p class="card-text" style="text-align:center; margin-bottom:30px;color:black;">
+                                                    {{item.description}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <button class="eventCheck" [ngClass]="{'statusComplete' : item.eventStatus == 'completed'}">Check in This Event</button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row" *ngIf="eventsData.Guntur">
+                <div class="col-md-12 text-center theme-font">
+                    <h3>Guntur</h3>
+                    <div class="col-md-12 text-center">
+                        <div class="row section-padding">
+                            <div class="col-md-3 col-sm-6 col-xs-12"  *ngFor="let item of eventsData.Guntur" (click)="pageNavigate(item.slug)">
+                                <a routerLink="/event/1" class="">
+                                    <div class="card hover-trans wow slideInUp">
+                                        <div class="card-image">
+                                            <img src="/assets/images/image.png" [alt]="item.imageAlt" style="height: auto; width:100%;">
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h4 class="card-title  font-size-16" style="text-align:center;">{{item.name}}</h4>
+                                                    <p class="card-text" style="text-align:center; margin-bottom:30px;color:#8E9FB1;">
+                                                        {{item.description}}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <button>Check in This Event</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                           
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    </div>
+</section>
+<!-- <app-about-event></app-about-event> -->

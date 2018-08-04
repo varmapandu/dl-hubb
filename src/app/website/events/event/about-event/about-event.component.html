@@ -1,0 +1,74 @@
+<section id="wetrainsection">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12 wetrain">
+        <h2>About The Event !</h2>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-12">
+        <p style="font-size:18px;" class="margin-top-bottom" *ngFor="let item of eventData.event.about">
+          {{item}}
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="support">
+              <h4 class="font-weight-bold">Excel in Technology with Digital Lync !</h4>
+              <p>Digital Lync is the premier technology training hub providing quality education in the top notch technologies
+                demanded by IT giants. Excel in technology with Digital Lync!</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 jobassurance">
+              <div class="margin-auto" style="width:87%">
+                <ul>
+                  <li class="font-weight-bold"><img src="/assets/images/speaker.png"/>Speakers</li>
+                  <!-- <li>Sai Kumar (5 Yrs+ Experience, Machine Learning Engineer)</li> -->
+                  <li *ngFor="let item of eventData.event.speakers">{{item.name}}( {{item.description}} )</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="row ourunique">
+            <div class="col-md-12">
+              <div class="">
+                <div class="row signup">
+                  <div class="">
+                    <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                      <p class="font-size-20">Topics Covered</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                      <app-formmodal [buttonText]="buttonText" [page]="eventData.page"></app-formmodal>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <ul class="uniquefeatures ">
+                      <li *ngFor="let item of eventData.event.topics ">{{item}}
+                        <span class="hidden-xs">
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                        </span>
+                      </li>
+                     
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="row section-padding text-center">
+      <p style="font-size:24px;">Django helps you to create web-based applications within minutes.</p>
+      <p style="font-size:24px;">Attend the workshop organized by Digital Lync - the fastest growing educational hub for technologies.</p>
+    </div> -->
+  </div>
+</section>

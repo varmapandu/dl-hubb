@@ -1,0 +1,143 @@
+<section class="blogbanner" [style.backgroundImage]="'url('+imageHost+bannerImage.url+')'" >
+    <div class="container Aligner">
+        <!-- <div class="row Aligner-item"> -->
+            <!-- <div class="col-md-12"> -->
+                <!-- <h3 class="heading text-center">Now, We are Offering
+                    <br> Online Courses Too,
+                    <br> So, Step into a Bright Career!</h3> -->
+            <!-- </div> -->
+            <!-- <div class="col-md-5"></div> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+<section class="">
+    <div class="container">
+        <div class="col-md-9">
+            <h1>{{headName}}</h1>
+            <!-- <ul class="blog_hits">
+        <li><img src="../../../../assets/images/dlt-logo.svg" alt=""></li>
+        <li>45 Comments</li>
+        <li>234 Shares</li>
+      </ul> -->
+            <nav id="batch-items" style="display:inline">
+                <!-- <img src="../../../../assets/images/dlt-logo.svg" alt=""> -->
+                <ul class="table Aligner">
+                    <li>
+                        <img src="../../../../assets/images/dlt-logo.svg" alt="" width="180px;">
+                    </li>
+                    <li>Education</li>
+                    <li>45 Comments</li>
+                    <li>234 Shares</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-3">
+            <h3>Share to your Friends</h3>
+            <ul class="blog_social_icon">
+                <li>
+                    <a href="" class="fa fa-instagram"></a>
+                </li>
+                <li>
+                    <a href="" class="fa fa-twitter"></a>
+                </li>
+                <li>
+                    <a href="" class="fa fa-google-plus"></a>
+                </li>
+                <li>
+                    <a href="" class="fa fa-linkedin"></a>
+                </li>
+                <li>
+                    <a href="" class="fa fa-facebook"></a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="container section-padding">
+    <div class="row">
+        <div class="sticky-container">
+            <div class="col-md-12">
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                    <div class="row" *ngIf=''>
+                        <div class="col-md-12 padding15">
+                            <img [src]="imageHost+underBannerImage.url" alt="" class="img-responsive" width="100%">
+
+                        </div>
+
+
+                    </div>
+                    <div class="padding5">
+                        {{intro}}
+                    </div>
+                    <div class="padding5" *ngFor="let item of blogData">
+                        <h3>{{item.query}}</h3>
+                        <p>{{item.ans}}</p>
+                    </div>
+                    <div class="pull-right">
+                            <p style="margin:0px">{{authorName}}</p>
+                            <p>{{authorDesc}}</p>
+                        </div>
+                    <div class="padding15">
+                        <h3>{{whyDl}}</h3>
+                    </div>
+                    <div class="" *ngFor="let item of aboutBlog">
+                        <h3>{{item.why}}</h3>
+                        <p>{{item.reason}}</p>
+                    </div>
+                </div>
+                <div class="col-md-3  hidden-xs hidden-sm scrollspy" id="scrollelements" style="position:absolute;right:0">
+                    <div id="nav" #nav class="nav course-page-enroll-form" data-spy="affix">
+                        <form class="form panel-body" role="form" class="enroll-now-form" novalidate autocomplete="off" [formGroup]="UserDetailsForm">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>Enroll Now</h3>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="name">Name</label>
+                                <input class="form-control" name="name" required autofocus placeholder="Name" type="text" required [(ngModel)]="profile.name"
+                                    formControlName="name" />
+                                <span class="error" *ngIf="UserDetailsForm.get('name').touched && UserDetailsForm.get('name').hasError('required')">
+                                    Name required
+                                </span>
+                                <span class="error" *ngIf="UserDetailsForm.get('name').touched && UserDetailsForm.get('name').hasError('pattern')">
+                                    Invalid Name
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="email">Email</label>
+                                <input class="form-control" name="email" required autofocus placeholder="Your e-mail" type="email" [(ngModel)]="profile.email"
+                                    formControlName="email" />
+                                <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('required')">
+                                    Email required
+                                </span>
+                                <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('pattern')">
+                                    Enter valid Email
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="mobile">Mobile</label>
+                                <input class="form-control" name="mobile" required autofocus placeholder="Mobile" type="text" [(ngModel)]="profile.mobile"
+                                    formControlName="mobile" />
+                                <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('required')">
+                                    Mobile required
+                                </span>
+                                <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('pattern')">
+                                    Invalid Mobile Number
+                                </span>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <button class="btn" type="submit" (click)="onSubmit()" [disabled]="!UserDetailsForm.valid">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

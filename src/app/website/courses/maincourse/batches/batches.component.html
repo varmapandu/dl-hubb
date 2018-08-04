@@ -1,0 +1,105 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <nav class="nav navtab-links">
+        <ul>
+          <li class="active" (click)="getOfflineBatches('offline','Gachibowli',0)" style="cursor:pointer">
+            <a href="#classrooms" data-toggle="tab">Class Room</a>
+          </li>
+          <li>
+            <a href="#online" data-toggle="tab" (click)="getOnlineBatches('online','Gachibowli',0)">Online</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-padding">
+      <div class="row">
+          <div style="padding:0px;margin: 13px auto;"> 
+              <app-formmodal [page]="page" [buttonText]="buttonText"></app-formmodal>
+          </div>
+          <div class="block visible-xs hidden-sm hidden-md hidden-lg" style="margin:15px auto;padding:9px;">
+              <p>Give us a call at India <br><a href="tel:+91 70938 61616">+91 70938 61616</a></p>
+          </div>
+          <div class="block visible-xs hidden-sm hidden-md hidden-lg" style="margin:15px auto;padding:9px;">
+            <p>Give us a call at US <br> <a href="tel:+1415-969-6904"> +1 (415)-969-6904 </a></p>
+          </div>
+        <div class="col-md-3" *ngIf="offlineBatchList">
+          <div class="branches block" style="margin-bottom: 10px;">
+            <nav class="activeItem">
+              <ul class="tabel">
+                <li style="border-bottom: 1px solid #ccc">
+                  <h4 style="text-align: center;">India</h4>
+                  <span>Branch wise Batches</span>
+                </li>
+                <li *ngFor="let item of branches; let i = index" (click)="getBatches('offline',item,i)" style="border-bottom:1px solid #57b5ac;cursor:pointer;font-weight:bold" [class.active]="i == selectedRow">
+                  {{item}}
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="col-md-3" *ngIf="onlineBatchList">
+            <div class="branches block" style="margin-bottom: 10px;">
+              <nav class="activeItem">
+                <ul class="tabel">
+                  <li style="border-bottom: 1px solid #ccc">
+                    <h4 style="text-align: center;">India</h4>
+                    <span>Branch wise Batches</span>
+                  </li>
+                  <li  *ngFor="let item of branches; let i = index" (click)="getBatches('online',item,i)" style="border-bottom:1px solid #57b5ac;cursor:pointer;font-weight:bold" [class.active]="true" [class.active]="i == selectedRow">
+                    {{item}}
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        <div class="col-md-7 block" style="height:258px;overflow-x:hidden;overflow-y:scroll">
+          <div class="tab-content">
+            <div class="row tab-pane fade in active" id="classrooms" *ngFor = "let item of batchDetails">
+              <div class="row batches-list">
+                <nav id="batch-items"> 
+                <ul class="tabel">
+                  <li>
+                    <a>{{item.startDate}}</a>
+                  </li>
+                  <li>
+                    <a>{{item.type}}</a>
+                  </li>
+                  <li>
+                    <a>{{item.time}}</a>
+                  </li>
+                  <li>
+                    <a>{{item.seats}} Seats Available</a>
+                  </li>
+                  <li>
+                      <a>{{item.status}} Batch</a>
+                  </li>
+                </ul>
+              </nav>
+              </div>
+              <hr>
+            </div>
+            <div class="row tab-pane fade in active" id="classrooms" *ngIf="batchDetails.length<1">
+              <div class="row batches-list" >
+                  <p class="text-center">Upcoming Batch, Coming Soon!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <!-- <div style="padding:0px;"> 
+              <app-formmodal [page]="page" [buttonText]="buttonText"></app-formmodal>
+          </div> -->
+          <div class="block hidden-xs visible-sm visible-md visible-lg" style="margin-top:8px;padding:9px;">
+              <p>Give us a call at India <br><a href="tel:+91 70938 61616">+91 70938 61616</a></p>
+          </div>
+          <div class="block hidden-xs visible-sm visible-md visible-lg" style="margin-top:8px;padding:9px;">
+            <p>Give us a call at US <br> <a href="tel:+1415-969-6904"> +1 (415)-969-6904 </a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

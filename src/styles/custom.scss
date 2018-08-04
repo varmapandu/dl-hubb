@@ -1,0 +1,219 @@
+a {
+    cursor: pointer !important;
+}
+
+.link {
+    cursor: pointer;
+    color: white;
+    width: 60px !important;
+    height: 60px !important;
+    background-color: #a1b1c0; // border-left: 1px solid #c6d0da;
+    border-radius: 0% !important;
+    font-weight: bold;
+    border-style: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.outline-none {
+    outline: none;
+}
+.topic-title {
+    font-weight: bold;
+    color: #4285f4 !important;
+}
+.captilize{
+    text-transform: capitalize;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font-white {
+    color: white !important;
+}
+
+
+sub {
+    color: darkorange!important;
+}
+#page-content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    position: fixed;
+    padding: 5rem 0rem;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    font-size: 13px!important;
+    font-family: inherit
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em
+}
+
+table tr {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em
+}
+
+table td,
+table th {
+    padding: 12px;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase
+}
+
+@media screen and (max-width:767px) {
+    table {
+        border: 0
+    }
+    table caption {
+        font-size: 1.3em
+    }
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    table tr {
+        display: block;
+        margin-bottom: .625em;
+        border: none;
+        -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+        -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24)
+    }
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right
+    }
+    table td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: 700;
+        text-transform: uppercase
+    }
+    table td:last-child {
+        border-bottom: 0
+    }
+}
+
+infinite-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    background: rgba(255, 255, 255, .1);
+}
+
+.margin8 {
+    margin: 8px;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+.padding15 {
+    padding: 15px;
+}
+
+.padding20 {
+    padding: 20px;
+}
+
+.cursor {
+    cursor: pointer !important;
+}
+
+.non-active-card {
+    opacity: 0.7; // background-image:url("http://images.clipartpanda.com/warning-clipart-4T9oMXy8c.jpeg") !important;
+    // background-repeat: no-repeat !important;
+    // background-size: 100% 100% !important;
+    // background-color: grey !important;
+    color: grey !important; //cursor: not-allowed !important;
+    background-color: #ccc !important;
+}
+.active-link{
+    font-weight: bold;
+    color:#557DBF;
+}
+
+// agm-map {
+//     height: 80vh;
+// }
+
+::ng-deep .mat-tab-label {
+    text-transform: uppercase;
+    color: #4A90E2;
+    font-weight: bold;
+}
+
+
+.border-left{
+    border-left: 2px solid red;
+    height: 100px;
+    margin:20px 20px 20px 28px;;
+}
+.border-left:nth-child(2n){
+    border-left: 2px solid blue;
+    height: 100px;
+    margin:20px 20px 20px 28px;;
+}
+.card-content{
+    padding: 20px;
+}
+.form-group{
+    height: 80px;
+  }
+  .form-group span{
+    color:red !important;
+    font-size: 12px;
+    padding-left: 3px;
+  }
+  .form-group span:after{
+    color:red !important;
+    font-size: 12px;
+    content:'*';
+    display: inline;
+  }
+

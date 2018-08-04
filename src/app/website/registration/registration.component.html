@@ -1,0 +1,127 @@
+<section id="loginform" class="outer-wrapper section-padding">
+
+  <div class="inner-wrapper ">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1>Welcome To Digital Lync</h1>   
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5 login-form-container col-sm-offset-3 " >
+          <form class="login-form" novalidate autocomplete="off" [formGroup]="UserDetailsForm">
+            <div class="input-container">
+              <input type="text" class="input" name="name" placeholder="Name" required [(ngModel)]="profile.name" formControlName="name"
+              />
+              <span class="error" *ngIf="UserDetailsForm.get('name').touched && UserDetailsForm.get('name').hasError('required')">
+                Name required
+              </span>
+            </div>
+            <div class="input-container">
+              <input type="email" class="input" name="email" placeholder="Email" required [(ngModel)]="profile.email" formControlName="email"
+              />
+              <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('required')">
+                Email required
+              </span>
+              <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('pattern')">
+                Enter valid Email
+              </span>
+            </div>
+
+            <div class="input-container">
+              <input type="text" class="input" name="mobile" placeholder="Mobile" required [(ngModel)]="profile.mobile" formControlName="mobile"
+              />
+              <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('required')">
+                Mobile required
+              </span>
+              <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('pattern')">
+                Invalid Mobile Number
+              </span>
+            </div>
+
+            <div class="input-container">
+                <input type="text" class="input" name="dob" placeholder="Date of Birth(dd/mm/yyyy)" required [(ngModel)]="profile.dob" formControlName="dob"
+                />
+                <span class="error" *ngIf="UserDetailsForm.get('dob').touched && UserDetailsForm.get('dob').hasError('required')">
+                  Date of Birth required
+                </span>
+               
+              </div>
+             
+            <div class="input-container">
+              <input type="text" class="input" name="college" placeholder="College Name" required [(ngModel)]="profile.college" formControlName="college"
+              />
+              <span class="error" *ngIf="UserDetailsForm.get('college').touched && UserDetailsForm.get('college').hasError('required')">
+                college name required
+              </span>
+            </div>         
+            
+              <div class="input-container">
+                  <input type="text" class="input" name="qualification" placeholder="Qualification" required [(ngModel)]="profile.qualification" formControlName="qualification"
+                  />
+                  <span class="error" *ngIf="UserDetailsForm.get('qualification').touched && UserDetailsForm.get('qualification').hasError('required')">
+                      Qualification required
+                  </span>
+                
+                </div>
+
+                <div class="input-container">
+                    <input type="text" class="input" name="specialization" placeholder="Specialization" required [(ngModel)]="profile.specialization" formControlName="specialization"
+                    />
+                    <span class="error" *ngIf="UserDetailsForm.get('specialization').touched && UserDetailsForm.get('specialization').hasError('required')">
+                        Specialization required
+                    </span>
+                  
+                  </div>
+                  <div class="input-container">
+                      <input type="text" class="input" name="address" placeholder="Address" required [(ngModel)]="profile.address" formControlName="address"
+                      />
+                      <span class="error" *ngIf="UserDetailsForm.get('address').touched && UserDetailsForm.get('address').hasError('required')">
+                          Address required
+                      </span>
+                    
+                    </div>
+            
+            <div class="input-container">     
+                <label style="font-weight: 600">Course Interested</label>
+                <select class="form-control" id="" required [(ngModel)]="profile.courseInterested" formControlName="courseInterested">
+                  <option value="" selected>Select your option</option>
+                    <option value="fullstack">Fullstack</option>
+                    <option value="devops">DevOps</option>
+                    <option value="digitalmarketing">Digital Marketing</option>
+                    <option value="blockchain">Blockchain</option>
+                    <option value="bigdata">Big Data</option>
+                    <option value="azure">Azure</option>
+                    <option value="aws">AWS</option>
+                    <option value="python">Python</option>
+                    <option value="deeplearning">Deep Learning</option>
+                    <option value="machinelearning">Machine Learning</option>
+                    <option value="dataanalysis">Data Analysis</option>
+                    <option value="vfx">VFX</option>
+                    <option value="iot">IoT</option>
+                    <option value="datascienc e">Data Science</option>
+                    <option value="artificialintelligence">Artificial Intelligence</option>
+                    <option value="gamedevelopment">Game Development</option>
+                    <option value="graphicdesign">Graphic Design</option>
+                    <option value="ui-ux">UI/UX</option>
+                    <option value="3d-animation">3D Animation</option>
+                  </select>
+           
+              </div> 
+            
+            <div class="row padding15">
+              <div class="col-md-12 text-center">
+                <button type="submit" class="get-in-touch btn" (click)="register()" [disabled]="!UserDetailsForm.valid" [ngClass]="{'green-color': UserDetailsForm.valid}">Submit</button>
+              </div>
+            </div>
+            
+          </form>
+          <div class="input-container text-center">
+           
+              <p style="color:green">{{message}}</p>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,239 @@
+.blog_hits li{
+    display: inline-block;
+    list-style-type: none;
+    padding-right: 30px;
+}
+.blog_hits li:first-child,las{
+    border-right:  2px solid grey;
+
+}
+.padding5{
+  padding: 5px;
+}
+.sticky-container  .scroll-content {
+  border: 1px solid #333;
+  //background-image: linear-gradient(rgba(255, 255, 255, 1) 50%, transparent 50%, transparent);
+  background-size: 50px 50px;
+  height: 100vh !important;
+}
+.sticky-float-right {
+  background-color: rgba(0,255,0, .2);
+}
+
+div[ngui-sticky] {
+  // min-width: 400px;
+  text-align: center;
+  // background: #333;
+  color: #fff;
+  // border: 1px solid #333;
+  padding: 10px;
+}
+
+
+.affix-top {
+  position: absolute;
+}
+
+.affix {
+  top: 0px;
+}
+
+.affix, 
+.affix-bottom {
+    width: 215px;
+}
+
+.affix-bottom {
+  position: absolute;
+}
+
+.enroll-now-form{
+  //margin-top: 10px;
+  h3{
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    text-align: center;
+    color: #57b5ac;
+  }
+  button{
+    width: 120px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #57b5ac;
+    color: white;
+  }
+}
+@media only screen and (max-width: 768px) {
+    #batch-items .tabel li{
+        border-style: none;
+        display: inherit;
+        
+
+    }
+    // #batch-items .tabel li a{
+    //     padding: 0px ;
+    //     margin: 0px;
+    // }
+  }
+  @media only screen and (max-width: 1024px) {
+    #batch-items .tabel li{
+        border-style: none;
+        // display: inherit;
+        display: inline-block !important;
+        
+
+    }
+    // #batch-items .tabel li a{
+    //     padding: 0px ;
+    //     margin: 0px;
+    // }
+
+  }
+  @media only screen and (max-width: 414px) {
+    #batch-items .tabel li{
+        border-style: none;
+        display: inherit;
+
+
+    }
+    // #batch-items .tabel li a{
+    //     padding: 0px ;
+    //     margin: 0px;
+    // }
+
+  }
+
+  @media only screen and (max-width: 414px) {
+    nav ul {
+      display: table-row;
+      display: block !important;
+    }
+  
+  nav ul li {
+      list-style: none;
+    text-align: center;
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+    padding:0px 30px 0px 30px;
+    
+  
+  }
+  }
+  .table {
+    display: table;
+    table-layout: fixed;
+    display: block;
+    
+  }
+  nav {
+    border-right: none;
+    width: 100%;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+   
+  }
+  nav ul li {
+    list-style: none;
+  text-align: center;
+  // border-left: 2px solid #fff;
+  border-right: 2px solid #ccc;
+  // padding:22px 30px 22px 30px;
+  padding: 0px 24px 0px 20px;
+  display: inline-block;
+}
+nav ul li:first-child { 
+  border-right: none;
+  line-height: 3px !important;
+ }
+ nav ul li:nth-child(2) {
+  background-color:#ccc;
+  padding: 5px;
+  
+ }
+ nav ul li:last-child { 
+  border-right: none;
+  
+ }
+
+  .table ul {
+    display: table-row;
+  }
+  
+  .table ul li {
+    display: table-cell;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 600px) {
+    nav ul {
+      display: table-row;
+      display: block !important;
+    }
+    
+  }
+
+  .course-page-enroll-form{
+    background-color: rgb(255, 255, 255);
+    /* margin-top: 20px; */
+    border-radius: 5px;
+    /* box-shadow: rgba(0, 0, 0, 0.4) 2px 1px 8px 0px; */
+    width: 280px;
+    padding: 20px;
+    z-index: 9999;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .blog_social_icon li{
+    list-style-type: none;
+    padding: 8px;
+    display: inline-block;
+    color:#fff;
+    border-radius: 50%;
+    font-size: 30px;
+    a{
+      text-decoration: none;
+    }
+  
+  }
+  .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 97%;
+    height: auto;
+}
+.blogbanner {
+  margin-top: 0px;
+  display: flex;
+  height: 80vh;
+  //background-image: url('../images/home-banner.jpg');
+  background-position: bottom;
+  background-size: cover;
+  max-width: 100%
+}
+
+.blogbanner .heading {
+  font-size: 43px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 2px;
+  text-align: center;
+  color: white;
+  // margin-top: 150px;  
+}
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  .blogbanner {
+    height: 21vh;
+  }
+
+  .blogbanner h1{
+    font-size:16px;
+  }
+  .form-group .contact-button{
+    width: 87px;
+    padding: 0px;
+    height: 20px;
+
+  }
+}
